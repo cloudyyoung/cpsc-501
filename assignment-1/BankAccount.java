@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public abstract class BankAccount {
@@ -18,6 +19,7 @@ public abstract class BankAccount {
     }
     
     protected abstract double getMonthlyFeesAndInterest();
+    public abstract BankAccount copy();
     
     protected boolean sufficientFunds(double amount) {
         return amount > 0.0 && amount <= this.getAvailableBalance();
@@ -58,6 +60,14 @@ public abstract class BankAccount {
             this.withdraw(amount);
             receipient.deposit(amount);
         }
+        
+        if(receipient.getAccountHolder() == this.getAccountHolder()) {
+    		this.addTransaction(new Transaction("Online Banking transfer", amount));
+    		receipient.addTransaction(new Transaction("Online Banking to Deposit Account", amount));
+    	}else {
+    		this.addTransaction(new E_Transfer("e-Transfer received", amount, receipient, this, LocalDate.now()));
+    		receipient.addTransaction(new E_Transfer("e-Transfer sent", amount, receipient, this, LocalDate.now()));
+    	}
     }
     
     public int getAccountNumber() {

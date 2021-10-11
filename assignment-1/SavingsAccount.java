@@ -8,6 +8,14 @@ public class SavingsAccount extends BankAccount {
 		this.setMinimumBalance(minimumBalance);
 	}
 	
+	public SavingsAccount(SavingsAccount copy) {
+		this(copy.getAccountHolder(), copy.getAccountNumber(), copy.getAnnualInterestRate(), copy.getMinimumBalance());
+	}
+
+    public SavingsAccount copy() {
+    	return new SavingsAccount(this);
+    }
+	
     public double getAnnualInterestRate() {
 		return this.annualInterestRate;
 	}

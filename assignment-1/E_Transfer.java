@@ -1,41 +1,31 @@
 import java.time.LocalDate;
 
 public class E_Transfer extends Transaction {
-	private Customer from;
-	private Customer to;
-	private String referenceCode;
+	private BankAccount from;
+	private BankAccount to;
 	private LocalDate receivedOn;
 
-	public E_Transfer(String description, double amount, Customer from, Customer to, String referenceCode, LocalDate receiveOn) {
+	public E_Transfer(String description, double amount, BankAccount from, BankAccount to, LocalDate receiveOn) {
 		super(description, amount);
 		this.setFrom(from);
 		this.setTo(to);
-		this.setReferenceCode(referenceCode);
 		this.setReceivedOn(receiveOn);
 	}
 
-	public Customer getFrom() {
-		return new Customer(this.from);
+	public BankAccount getFrom() {
+		return this.from.copy();
 	}
 
-	private void setFrom(Customer from) {
-		this.from = new Customer(from);
+	private void setFrom(BankAccount from) {
+		this.from = from.copy();
 	}
 
-	public Customer getTo() {
-		return new Customer(this.to);
+	public BankAccount getTo() {
+		return this.to.copy();
 	}
 
-	private void setTo(Customer to) {
-		this.to = new Customer(to);
-	}
-
-	public String getReferenceCode() {
-		return this.referenceCode;
-	}
-
-	private void setReferenceCode(String referenceCode) {
-		this.referenceCode = referenceCode;
+	private void setTo(BankAccount to) {
+		this.to = to.copy();
 	}
 
 	public LocalDate getReceivedOn() {

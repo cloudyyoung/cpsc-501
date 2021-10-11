@@ -7,6 +7,14 @@ public class ChequingAccount extends BankAccount{
         this.setOverdraftAmount(overdraftAmount);
         this.setOverdraftFee(overdraftFee);
     }
+    
+    public ChequingAccount(ChequingAccount copy) {
+    	this(copy.getAccountHolder(), copy.getAccountNumber(), copy.getOverdraftAmount(), copy.getOverdraftFee());
+    }
+    
+    public ChequingAccount copy() {
+    	return new ChequingAccount(this);
+    }
 
     private void setOverdraftFee(double fee) {
     	this.overdraftFee = (fee >= 0.0) ? fee : 1.0;
