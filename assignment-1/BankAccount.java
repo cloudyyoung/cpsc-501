@@ -10,6 +10,7 @@ public abstract class BankAccount {
     public BankAccount(Customer holder, int accountNumber) {
         this.setAccountHolder(holder);
         this.accountNumber = accountNumber;
+        this.transactions = new ArrayList<Transaction>();
     }
     
     public BankAccount(BankAccount copy){
@@ -37,7 +38,7 @@ public abstract class BankAccount {
         return this.balance;
     }
     
-	private void setBalance(double balance) {
+	protected void setBalance(double balance) {
 		if (balance >= 0) this.balance = balance;
 	}
     

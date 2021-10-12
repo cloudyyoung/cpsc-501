@@ -1,4 +1,4 @@
-public class ChequingAccount extends BankAccount{
+public class ChequingAccount extends BankAccount {
     private double overdraftFee;
     private double overdraftAmount = 100.0; 
 
@@ -9,13 +9,16 @@ public class ChequingAccount extends BankAccount{
     }
     
     public ChequingAccount(ChequingAccount copy) {
-    	this(copy.getAccountHolder(), copy.getAccountNumber(), copy.getOverdraftAmount(), copy.getOverdraftFee());
+    	super(copy.getAccountHolder(), copy.getAccountNumber());
+        this.setOverdraftAmount(copy.getOverdraftAmount());
+        this.setOverdraftFee(copy.getOverdraftFee());
     }
     
-    public ChequingAccount copy() {
-    	return new ChequingAccount(this);
-    }
-
+    @Override
+	protected void setBalance(double balance) {
+		if (balance >= -this.overdraftFee) super.setBalance(balance);
+	}
+ 
     private void setOverdraftFee(double fee) {
     	this.overdraftFee = (fee >= 0.0) ? fee : 1.0;
     }
@@ -37,15 +40,22 @@ public class ChequingAccount extends BankAccount{
     	return this.getBalance() + this.overdraftAmount;
     }
     
-    @Override
     public void withdraw(double amount) {
-		super.withdraw(amount + overdraftFee);
+    	if (this.sufficientFunds(amount)) {
+            this.setBalance(this.getBalance() - amount);
+        }else {
+        	this.setBalance(this.getBalance() - amount - overdraftFee);
+        }
     }
     
     protected double getMonthlyFeesAndInterest() {
-    	if (getBalance() < 0.0) {
-    		return 0.2 * getBalance();
+    	if (this.getBalance() < 0.0) {
+    		return 0.2 * this.getBalance();
     	}
     	return 0.0;
+    }
+    
+    public ChequingAccount copy() {
+    	return new ChequingAccount(this);
     }
 }

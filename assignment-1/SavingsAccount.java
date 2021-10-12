@@ -3,17 +3,34 @@ public class SavingsAccount extends BankAccount {
 	private double minimumBalance = 0;
 	
 	public SavingsAccount(Customer holder, int accountNumber, double annualInterestRate, double minimumBalance) {
-		super(holder, accountNumber);
+        super(holder, accountNumber);
 		this.setAnnualInterestRate(annualInterestRate);
 		this.setMinimumBalance(minimumBalance);
 	}
 	
 	public SavingsAccount(SavingsAccount copy) {
-		this(copy.getAccountHolder(), copy.getAccountNumber(), copy.getAnnualInterestRate(), copy.getMinimumBalance());
+        super(copy.getAccountHolder(), copy.getAccountNumber());
+		this.setAnnualInterestRate(copy.getAnnualInterestRate());
+		this.setMinimumBalance(copy.getMinimumBalance());
 	}
+    
+	@Override
+    protected double getAvailableBalance() {
+    	return this.getBalance() - this.getMinimumBalance();
+    }
 
-    public SavingsAccount copy() {
-    	return new SavingsAccount(this);
+    public void transfer(double amount, ChequingAccount receipient) {
+        if (this.sufficientFunds(amount)) {
+            this.withdraw(amount);
+            receipient.deposit(amount);
+        }
+    }
+    
+    public void transfer(double amount, SavingsAccount receipient) {
+        if (this.sufficientFunds(amount)) {
+            this.withdraw(amount);
+            receipient.deposit(amount);
+        }
     }
 	
     public double getAnnualInterestRate() {
@@ -32,13 +49,17 @@ public class SavingsAccount extends BankAccount {
 		this.minimumBalance = minimumBalance;
 	}
 	
-	public void withdraw(double amount) {
-		if (this.getBalance() - amount >= this.minimumBalance) super.withdraw(amount);
-	}	
-	
 	@Override
+	public void withdraw(double amount) {
+		if (amount > 0 && this.getBalance() - amount >= this.minimumBalance) this.setBalance(this.getBalance() - amount);
+	}
+	
     protected double getMonthlyFeesAndInterest() {
         return this.annualInterestRate * this.getBalance() / 12;
+    }
+    
+    public SavingsAccount copy() {
+    	return new SavingsAccount(this);
     }
     
 }

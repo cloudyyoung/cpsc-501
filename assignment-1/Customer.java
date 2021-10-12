@@ -30,4 +30,13 @@ public class Customer {
 	public String toString() {
 		return this.name + " " + this.id;
 	}
+	
+	@Override
+	public boolean equals(Object a) {
+		if(a instanceof Customer) {
+			Customer a1 = (Customer) a;
+			return a1.getID() == this.getID();
+		}
+		return false;
+	}
 }

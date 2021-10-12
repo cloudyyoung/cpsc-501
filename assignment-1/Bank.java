@@ -4,12 +4,16 @@ import java.util.HashSet;
 public class Bank{
 
     private HashSet<BankAccount> accounts = new HashSet<BankAccount>();
-
-    public void addAccount(BankAccount add){
-        this.accounts.add(add);
+    
+    public void addAccount(BankAccount account) {
+    	this.accounts.add(account.copy());
     }
 
     public ArrayList<BankAccount> getAccounts(){
-        return new ArrayList<BankAccount>(this.accounts);
+    	ArrayList<BankAccount> accounts = new ArrayList<BankAccount>();
+    	for(BankAccount ca : this.accounts) {
+    		accounts.add(ca.copy());
+    	}
+        return accounts;
     }
 }
