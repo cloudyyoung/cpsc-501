@@ -315,6 +315,7 @@ WaveFile convolution(WaveFile input, WaveFile IR) {
     ComplexArray outputComplexArray;
     
     cout << "complex arrays build" << endl;
+    // For each channel, FFT the input and output and multiply, and copy to output
     for (int r = 0; r < output.channels; r++) {
         cout << "IR complex array channel #" << r << endl;
 
@@ -339,7 +340,7 @@ WaveFile convolution(WaveFile input, WaveFile IR) {
         ifft(outputComplexArray);
         cout << "output complex array ifft" << endl;
 
-        // Copy real to output
+        // Copy real to output intertwined
         for (int t = 0; t < outputSample; t++) {
             output.array[t * output.channels + r] = outputComplexArray[t].real();
         }
