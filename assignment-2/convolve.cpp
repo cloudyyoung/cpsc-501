@@ -19,9 +19,6 @@
 #define BITS_PER_SAMPLE		16 //  Standard sample size in bits
 #define BYTES_PER_SAMPLE	(BITS_PER_SAMPLE / 8) // Standard sample size in bytes
 #define MAX_SHORT_VALUE		32768 // Rescaling factor to convert between 16-bit shorts and doubles between -1 and 1
-#define MONOPHONIC			1
-#define STEREOPHONIC		2
-#define FMT_OFFSET			12 // Offset of the fmt chunk in the WAV header
 
 using namespace std;
 
@@ -330,8 +327,10 @@ WaveFile convolution(WaveFile input, WaveFile IR) {
         fft(inputComplexArray);
         
         // FFT IR
+        int IRArrayIndex = r;
         for (int t = 0; t < IR.numberOfSample; t++) {
-            IRComplexArray[t] = IR.array[t * output.channels + r];
+            IRComplexArray[t] = IR.array[IRArrayIndex];
+            IRArrayIndex += output.channels;
         }
         fft(IRComplexArray);
 
@@ -341,8 +340,10 @@ WaveFile convolution(WaveFile input, WaveFile IR) {
         cout << "output complex array ifft" << endl;
 
         // Copy real to output intertwined
+        int outputIndex = r;
         for (int t = 0; t < outputSample; t++) {
-            output.array[t * output.channels + r] = outputComplexArray[t].real();
+            output.array[outputIndex] = outputComplexArray[t].real();
+            outputIndex += output.channels;
         }
         cout << "output complex array to real" << endl << endl;
     }
