@@ -1,4 +1,5 @@
 
+@SuppressWarnings("unused")
 public final class ClassA implements java.io.Serializable, Runnable {
 
     private int val = 3;

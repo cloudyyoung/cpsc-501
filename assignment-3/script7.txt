@@ -1,0 +1,120 @@
+======================================================
+Filename: script7.txt
+Running Test: [LClassB;@27716f4
+Recursive: true
+Name: [LClassB;
+Superclass -> 
+    SUPERCLASS
+        Name: java.lang.Object
+        Superclass: NONE
+        Interfaces: NONE
+        Constructors -> 
+            CONSTRUCTOR
+                Name: java.lang.Object
+                Modifiers: public
+                Parameter types: NONE
+                Exceptions: NONE
+                Belongs: java.lang.Object
+        Methods -> 
+            METHOD
+                Name: finalize
+                Modifiers: protected
+                Parameter types: NONE
+                Return type: void
+                Exceptions -> 
+                    java.lang.Throwable
+                Belongs: java.lang.Object
+            METHOD
+                Name: wait
+                Modifiers: public final
+                Parameter types: long, int
+                Return type: void
+                Exceptions -> 
+                    java.lang.InterruptedException
+                Belongs: java.lang.Object
+            METHOD
+                Name: wait
+                Modifiers: public final
+                Parameter types: NONE
+                Return type: void
+                Exceptions -> 
+                    java.lang.InterruptedException
+                Belongs: java.lang.Object
+            METHOD
+                Name: wait
+                Modifiers: public final native
+                Parameter types: long
+                Return type: void
+                Exceptions -> 
+                    java.lang.InterruptedException
+                Belongs: java.lang.Object
+            METHOD
+                Name: equals
+                Modifiers: public
+                Parameter types: java.lang.Object
+                Return type: boolean
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: toString
+                Modifiers: public
+                Parameter types: NONE
+                Return type: java.lang.String
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: hashCode
+                Modifiers: public native
+                Parameter types: NONE
+                Return type: int
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: getClass
+                Modifiers: public final native
+                Parameter types: NONE
+                Return type: java.lang.Class
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: clone
+                Modifiers: protected native
+                Parameter types: NONE
+                Return type: java.lang.Object
+                Exceptions -> 
+                    java.lang.CloneNotSupportedException
+                Belongs: java.lang.Object
+            METHOD
+                Name: notify
+                Modifiers: public final native
+                Parameter types: NONE
+                Return type: void
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: notifyAll
+                Modifiers: public final native
+                Parameter types: NONE
+                Return type: void
+                Exceptions: NONE
+                Belongs: java.lang.Object
+        Fields: NONE 
+Interfaces ->
+    INTERFACE
+        Name: java.lang.Cloneable
+        Superclass: NONE
+        Interfaces: NONE
+        Constructors: NONE
+        Methods: NONE
+        Fields: NONE 
+    INTERFACE
+        Name: java.io.Serializable
+        Superclass: NONE
+        Interfaces: NONE
+        Constructors: NONE
+        Methods: NONE
+        Fields: NONE 
+Constructors: NONE
+Methods: NONE
+Fields: NONE 
+======================================================

@@ -1,4 +1,5 @@
 
+@SuppressWarnings("unused")
 public abstract class ClassC extends ClassD implements InterfaceA {
 
     private ClassA val2 = new ClassA(100);

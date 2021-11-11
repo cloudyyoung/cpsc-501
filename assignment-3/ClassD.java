@@ -1,4 +1,5 @@
 
+@SuppressWarnings("unused")
 public class ClassD {
 
     private ClassA val = new ClassA(17);

@@ -1,0 +1,190 @@
+======================================================
+Filename: script1.txt
+Running Test: ClassA
+Recursive: true
+Name: ClassA
+Superclass -> 
+    SUPERCLASS
+        Name: java.lang.Object
+        Superclass: NONE
+        Interfaces: NONE
+        Constructors -> 
+            CONSTRUCTOR
+                Name: java.lang.Object
+                Modifiers: public
+                Parameter types: NONE
+                Exceptions: NONE
+                Belongs: java.lang.Object
+        Methods -> 
+            METHOD
+                Name: finalize
+                Modifiers: protected
+                Parameter types: NONE
+                Return type: void
+                Exceptions -> 
+                    java.lang.Throwable
+                Belongs: java.lang.Object
+            METHOD
+                Name: wait
+                Modifiers: public final
+                Parameter types: long, int
+                Return type: void
+                Exceptions -> 
+                    java.lang.InterruptedException
+                Belongs: java.lang.Object
+            METHOD
+                Name: wait
+                Modifiers: public final
+                Parameter types: NONE
+                Return type: void
+                Exceptions -> 
+                    java.lang.InterruptedException
+                Belongs: java.lang.Object
+            METHOD
+                Name: wait
+                Modifiers: public final native
+                Parameter types: long
+                Return type: void
+                Exceptions -> 
+                    java.lang.InterruptedException
+                Belongs: java.lang.Object
+            METHOD
+                Name: equals
+                Modifiers: public
+                Parameter types: java.lang.Object
+                Return type: boolean
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: toString
+                Modifiers: public
+                Parameter types: NONE
+                Return type: java.lang.String
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: hashCode
+                Modifiers: public native
+                Parameter types: NONE
+                Return type: int
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: getClass
+                Modifiers: public final native
+                Parameter types: NONE
+                Return type: java.lang.Class
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: clone
+                Modifiers: protected native
+                Parameter types: NONE
+                Return type: java.lang.Object
+                Exceptions -> 
+                    java.lang.CloneNotSupportedException
+                Belongs: java.lang.Object
+            METHOD
+                Name: notify
+                Modifiers: public final native
+                Parameter types: NONE
+                Return type: void
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: notifyAll
+                Modifiers: public final native
+                Parameter types: NONE
+                Return type: void
+                Exceptions: NONE
+                Belongs: java.lang.Object
+        Fields: NONE 
+Interfaces ->
+    INTERFACE
+        Name: java.io.Serializable
+        Superclass: NONE
+        Interfaces: NONE
+        Constructors: NONE
+        Methods: NONE
+        Fields: NONE 
+    INTERFACE
+        Name: java.lang.Runnable
+        Superclass: NONE
+        Interfaces: NONE
+        Constructors: NONE
+        Methods -> 
+            METHOD
+                Name: run
+                Modifiers: public abstract
+                Parameter types: NONE
+                Return type: void
+                Exceptions: NONE
+                Belongs: java.lang.Runnable
+        Fields: NONE 
+Constructors -> 
+    CONSTRUCTOR
+        Name: ClassA
+        Modifiers: public
+        Parameter types: NONE
+        Exceptions: NONE
+        Belongs: ClassA
+    CONSTRUCTOR
+        Name: ClassA
+        Modifiers: public
+        Parameter types: int
+        Exceptions: NONE
+        Belongs: ClassA
+Methods -> 
+    METHOD
+        Name: run
+        Modifiers: public
+        Parameter types: NONE
+        Return type: void
+        Exceptions: NONE
+        Belongs: ClassA
+    METHOD
+        Name: toString
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: ClassA
+    METHOD
+        Name: printSomething
+        Modifiers: private
+        Parameter types: NONE
+        Return type: void
+        Exceptions: NONE
+        Belongs: ClassA
+    METHOD
+        Name: setVal
+        Modifiers: public
+        Parameter types: int
+        Return type: void
+        Exceptions -> 
+            java.lang.Exception
+        Belongs: ClassA
+    METHOD
+        Name: getVal
+        Modifiers: public
+        Parameter types: NONE
+        Return type: int
+        Exceptions: NONE
+        Belongs: ClassA
+Fields -> 
+    FIELD
+        Name: val
+        Type: int
+        Modifiers: private
+        Belongs: ClassA
+    FIELD
+        Name: val2
+        Type: double
+        Modifiers: private
+        Belongs: ClassA
+    FIELD
+        Name: val3
+        Type: boolean
+        Modifiers: private
+        Belongs: ClassA
+======================================================

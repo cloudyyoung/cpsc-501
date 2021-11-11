@@ -1,4 +1,5 @@
 
+@SuppressWarnings("unused")
 public class ClassB extends ClassC implements Runnable {
 
     private ClassA val = new ClassA();

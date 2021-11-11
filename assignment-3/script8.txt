@@ -1,0 +1,1112 @@
+======================================================
+Filename: script8.txt
+Running Test: Test String
+Recursive: true
+Name: java.lang.String
+Superclass -> 
+    SUPERCLASS
+        Name: java.lang.Object
+        Superclass: NONE
+        Interfaces: NONE
+        Constructors -> 
+            CONSTRUCTOR
+                Name: java.lang.Object
+                Modifiers: public
+                Parameter types: NONE
+                Exceptions: NONE
+                Belongs: java.lang.Object
+        Methods -> 
+            METHOD
+                Name: finalize
+                Modifiers: protected
+                Parameter types: NONE
+                Return type: void
+                Exceptions -> 
+                    java.lang.Throwable
+                Belongs: java.lang.Object
+            METHOD
+                Name: wait
+                Modifiers: public final
+                Parameter types: long, int
+                Return type: void
+                Exceptions -> 
+                    java.lang.InterruptedException
+                Belongs: java.lang.Object
+            METHOD
+                Name: wait
+                Modifiers: public final
+                Parameter types: NONE
+                Return type: void
+                Exceptions -> 
+                    java.lang.InterruptedException
+                Belongs: java.lang.Object
+            METHOD
+                Name: wait
+                Modifiers: public final native
+                Parameter types: long
+                Return type: void
+                Exceptions -> 
+                    java.lang.InterruptedException
+                Belongs: java.lang.Object
+            METHOD
+                Name: equals
+                Modifiers: public
+                Parameter types: java.lang.Object
+                Return type: boolean
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: toString
+                Modifiers: public
+                Parameter types: NONE
+                Return type: java.lang.String
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: hashCode
+                Modifiers: public native
+                Parameter types: NONE
+                Return type: int
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: getClass
+                Modifiers: public final native
+                Parameter types: NONE
+                Return type: java.lang.Class
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: clone
+                Modifiers: protected native
+                Parameter types: NONE
+                Return type: java.lang.Object
+                Exceptions -> 
+                    java.lang.CloneNotSupportedException
+                Belongs: java.lang.Object
+            METHOD
+                Name: notify
+                Modifiers: public final native
+                Parameter types: NONE
+                Return type: void
+                Exceptions: NONE
+                Belongs: java.lang.Object
+            METHOD
+                Name: notifyAll
+                Modifiers: public final native
+                Parameter types: NONE
+                Return type: void
+                Exceptions: NONE
+                Belongs: java.lang.Object
+        Fields: NONE 
+Interfaces ->
+    INTERFACE
+        Name: java.io.Serializable
+        Superclass: NONE
+        Interfaces: NONE
+        Constructors: NONE
+        Methods: NONE
+        Fields: NONE 
+    INTERFACE
+        Name: java.lang.Comparable
+        Superclass: NONE
+        Interfaces: NONE
+        Constructors: NONE
+        Methods -> 
+            METHOD
+                Name: compareTo
+                Modifiers: public abstract
+                Parameter types: java.lang.Object
+                Return type: int
+                Exceptions: NONE
+                Belongs: java.lang.Comparable
+        Fields: NONE 
+    INTERFACE
+        Name: java.lang.CharSequence
+        Superclass: NONE
+        Interfaces: NONE
+        Constructors: NONE
+        Methods -> 
+            METHOD
+                Name: length
+                Modifiers: public abstract
+                Parameter types: NONE
+                Return type: int
+                Exceptions: NONE
+                Belongs: java.lang.CharSequence
+            METHOD
+                Name: toString
+                Modifiers: public abstract
+                Parameter types: NONE
+                Return type: java.lang.String
+                Exceptions: NONE
+                Belongs: java.lang.CharSequence
+            METHOD
+                Name: compare
+                Modifiers: public static
+                Parameter types: java.lang.CharSequence, java.lang.CharSequence
+                Return type: int
+                Exceptions: NONE
+                Belongs: java.lang.CharSequence
+            METHOD
+                Name: charAt
+                Modifiers: public abstract
+                Parameter types: int
+                Return type: char
+                Exceptions: NONE
+                Belongs: java.lang.CharSequence
+            METHOD
+                Name: isEmpty
+                Modifiers: public
+                Parameter types: NONE
+                Return type: boolean
+                Exceptions: NONE
+                Belongs: java.lang.CharSequence
+            METHOD
+                Name: codePoints
+                Modifiers: public
+                Parameter types: NONE
+                Return type: java.util.stream.IntStream
+                Exceptions: NONE
+                Belongs: java.lang.CharSequence
+            METHOD
+                Name: subSequence
+                Modifiers: public abstract
+                Parameter types: int, int
+                Return type: java.lang.CharSequence
+                Exceptions: NONE
+                Belongs: java.lang.CharSequence
+            METHOD
+                Name: chars
+                Modifiers: public
+                Parameter types: NONE
+                Return type: java.util.stream.IntStream
+                Exceptions: NONE
+                Belongs: java.lang.CharSequence
+            METHOD
+                Name: lambda$codePoints$1
+                Modifiers: private
+                Parameter types: NONE
+                Return type: java.util.Spliterator$OfInt
+                Exceptions: NONE
+                Belongs: java.lang.CharSequence
+            METHOD
+                Name: lambda$chars$0
+                Modifiers: private
+                Parameter types: NONE
+                Return type: java.util.Spliterator$OfInt
+                Exceptions: NONE
+                Belongs: java.lang.CharSequence
+        Fields: NONE 
+    INTERFACE
+        Name: java.lang.constant.Constable
+        Superclass: NONE
+        Interfaces: NONE
+        Constructors: NONE
+        Methods -> 
+            METHOD
+                Name: describeConstable
+                Modifiers: public abstract
+                Parameter types: NONE
+                Return type: java.util.Optional
+                Exceptions: NONE
+                Belongs: java.lang.constant.Constable
+        Fields: NONE 
+    INTERFACE
+        Name: java.lang.constant.ConstantDesc
+        Superclass: NONE
+        Interfaces: NONE
+        Constructors: NONE
+        Methods -> 
+            METHOD
+                Name: resolveConstantDesc
+                Modifiers: public abstract
+                Parameter types: java.lang.invoke.MethodHandles$Lookup
+                Return type: java.lang.Object
+                Exceptions -> 
+                    java.lang.ReflectiveOperationException
+                Belongs: java.lang.constant.ConstantDesc
+        Fields: NONE 
+Constructors -> 
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: [B
+        Exceptions: NONE
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: [B, int, int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: [B, java.nio.charset.Charset
+        Exceptions: NONE
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: [B, java.lang.String
+        Exceptions -> 
+            java.io.UnsupportedEncodingException
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: [B, int, int, java.nio.charset.Charset
+        Exceptions: NONE
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: java.lang.StringBuilder
+        Exceptions: NONE
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: java.lang.StringBuffer
+        Exceptions: NONE
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: [C, int, int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: [C
+        Exceptions: NONE
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: NONE
+        Exceptions: NONE
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: [B, int, int, java.lang.String
+        Exceptions -> 
+            java.io.UnsupportedEncodingException
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: [B, int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: [B, int, int, int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    CONSTRUCTOR
+        Name: java.lang.String
+        Modifiers: public
+        Parameter types: [I, int, int
+        Exceptions: NONE
+        Belongs: java.lang.String
+Methods -> 
+    METHOD
+        Name: value
+        Modifiers: 
+        Parameter types: NONE
+        Return type: [B
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: equals
+        Modifiers: public
+        Parameter types: java.lang.Object
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: length
+        Modifiers: public
+        Parameter types: NONE
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: toString
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: hashCode
+        Modifiers: public
+        Parameter types: NONE
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: getChars
+        Modifiers: public
+        Parameter types: int, int, [C, int
+        Return type: void
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: compareTo
+        Modifiers: public volatile
+        Parameter types: java.lang.Object
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: compareTo
+        Modifiers: public
+        Parameter types: java.lang.String
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: indexOf
+        Modifiers: public
+        Parameter types: int, int
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: indexOf
+        Modifiers: public
+        Parameter types: java.lang.String
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: indexOf
+        Modifiers: public
+        Parameter types: java.lang.String, int
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: indexOf
+        Modifiers: public
+        Parameter types: int
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: indexOf
+        Modifiers: static
+        Parameter types: [B, byte, int, java.lang.String, int
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: checkIndex
+        Modifiers: static
+        Parameter types: int, int
+        Return type: void
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: valueOf
+        Modifiers: public static
+        Parameter types: [C
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: valueOf
+        Modifiers: public static
+        Parameter types: java.lang.Object
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: valueOf
+        Modifiers: public static
+        Parameter types: long
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: valueOf
+        Modifiers: public static
+        Parameter types: [C, int, int
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: valueOf
+        Modifiers: public static
+        Parameter types: int
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: valueOf
+        Modifiers: public static
+        Parameter types: char
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: valueOf
+        Modifiers: public static
+        Parameter types: double
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: valueOf
+        Modifiers: public static
+        Parameter types: float
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: valueOf
+        Modifiers: public static
+        Parameter types: boolean
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: coder
+        Modifiers: 
+        Parameter types: NONE
+        Return type: byte
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: rangeCheck
+        Modifiers: private static
+        Parameter types: [C, int, int
+        Return type: java.lang.Void
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: checkBoundsOffCount
+        Modifiers: static
+        Parameter types: int, int, int
+        Return type: void
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: isLatin1
+        Modifiers: 
+        Parameter types: NONE
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: charAt
+        Modifiers: public
+        Parameter types: int
+        Return type: char
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: codePointAt
+        Modifiers: public
+        Parameter types: int
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: codePointBefore
+        Modifiers: public
+        Parameter types: int
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: codePointCount
+        Modifiers: public
+        Parameter types: int, int
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: offsetByCodePoints
+        Modifiers: public
+        Parameter types: int, int
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: checkBoundsBeginEnd
+        Modifiers: static
+        Parameter types: int, int, int
+        Return type: void
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: getBytes
+        Modifiers: public
+        Parameter types: java.nio.charset.Charset
+        Return type: [B
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: getBytes
+        Modifiers: 
+        Parameter types: [B, int, int, byte, int
+        Return type: void
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: getBytes
+        Modifiers: public
+        Parameter types: NONE
+        Return type: [B
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: getBytes
+        Modifiers: 
+        Parameter types: [B, int, byte
+        Return type: void
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: getBytes
+        Modifiers: public
+        Parameter types: java.lang.String
+        Return type: [B
+        Exceptions -> 
+            java.io.UnsupportedEncodingException
+        Belongs: java.lang.String
+    METHOD
+        Name: getBytes
+        Modifiers: public
+        Parameter types: int, int, [B, int
+        Return type: void
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: contentEquals
+        Modifiers: public
+        Parameter types: java.lang.StringBuffer
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: contentEquals
+        Modifiers: public
+        Parameter types: java.lang.CharSequence
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: nonSyncContentEquals
+        Modifiers: private
+        Parameter types: java.lang.AbstractStringBuilder
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: regionMatches
+        Modifiers: public
+        Parameter types: int, java.lang.String, int, int
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: regionMatches
+        Modifiers: public
+        Parameter types: boolean, int, java.lang.String, int, int
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: startsWith
+        Modifiers: public
+        Parameter types: java.lang.String, int
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: startsWith
+        Modifiers: public
+        Parameter types: java.lang.String
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: lastIndexOf
+        Modifiers: public
+        Parameter types: java.lang.String
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: lastIndexOf
+        Modifiers: public
+        Parameter types: int
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: lastIndexOf
+        Modifiers: static
+        Parameter types: [B, byte, int, java.lang.String, int
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: lastIndexOf
+        Modifiers: public
+        Parameter types: int, int
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: lastIndexOf
+        Modifiers: public
+        Parameter types: java.lang.String, int
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: substring
+        Modifiers: public
+        Parameter types: int, int
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: substring
+        Modifiers: public
+        Parameter types: int
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: isEmpty
+        Modifiers: public
+        Parameter types: NONE
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: replace
+        Modifiers: public
+        Parameter types: char, char
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: replace
+        Modifiers: public
+        Parameter types: java.lang.CharSequence, java.lang.CharSequence
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: matches
+        Modifiers: public
+        Parameter types: java.lang.String
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: replaceFirst
+        Modifiers: public
+        Parameter types: java.lang.String, java.lang.String
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: replaceAll
+        Modifiers: public
+        Parameter types: java.lang.String, java.lang.String
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: split
+        Modifiers: public
+        Parameter types: java.lang.String
+        Return type: [Ljava.lang.String;
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: split
+        Modifiers: public
+        Parameter types: java.lang.String, int
+        Return type: [Ljava.lang.String;
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: toLowerCase
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: toLowerCase
+        Modifiers: public
+        Parameter types: java.util.Locale
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: toUpperCase
+        Modifiers: public
+        Parameter types: java.util.Locale
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: toUpperCase
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: trim
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: strip
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: stripLeading
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: stripTrailing
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: indexOfNonWhitespace
+        Modifiers: private
+        Parameter types: NONE
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: lines
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.util.stream.Stream
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: repeat
+        Modifiers: public
+        Parameter types: int
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: lastIndexOfNonWhitespace
+        Modifiers: private
+        Parameter types: NONE
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: outdent
+        Modifiers: private static
+        Parameter types: java.util.List
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: isBlank
+        Modifiers: public
+        Parameter types: NONE
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: toCharArray
+        Modifiers: public
+        Parameter types: NONE
+        Return type: [C
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: format
+        Modifiers: public static transient
+        Parameter types: java.lang.String, [Ljava.lang.Object;
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: format
+        Modifiers: public static transient
+        Parameter types: java.util.Locale, java.lang.String, [Ljava.lang.Object;
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: resolveConstantDesc
+        Modifiers: public
+        Parameter types: java.lang.invoke.MethodHandles$Lookup
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: resolveConstantDesc
+        Modifiers: public volatile
+        Parameter types: java.lang.invoke.MethodHandles$Lookup
+        Return type: java.lang.Object
+        Exceptions -> 
+            java.lang.ReflectiveOperationException
+        Belongs: java.lang.String
+    METHOD
+        Name: codePoints
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.util.stream.IntStream
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: equalsIgnoreCase
+        Modifiers: public
+        Parameter types: java.lang.String
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: compareToIgnoreCase
+        Modifiers: public
+        Parameter types: java.lang.String
+        Return type: int
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: endsWith
+        Modifiers: public
+        Parameter types: java.lang.String
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: subSequence
+        Modifiers: public
+        Parameter types: int, int
+        Return type: java.lang.CharSequence
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: concat
+        Modifiers: public
+        Parameter types: java.lang.String
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: contains
+        Modifiers: public
+        Parameter types: java.lang.CharSequence
+        Return type: boolean
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: join
+        Modifiers: public static transient
+        Parameter types: java.lang.CharSequence, [Ljava.lang.CharSequence;
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: join
+        Modifiers: public static
+        Parameter types: java.lang.CharSequence, java.lang.Iterable
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: indent
+        Modifiers: public
+        Parameter types: int
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: stripIndent
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: translateEscapes
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: chars
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.util.stream.IntStream
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: transform
+        Modifiers: public
+        Parameter types: java.util.function.Function
+        Return type: java.lang.Object
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: formatted
+        Modifiers: public transient
+        Parameter types: [Ljava.lang.Object;
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: copyValueOf
+        Modifiers: public static
+        Parameter types: [C, int, int
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: copyValueOf
+        Modifiers: public static
+        Parameter types: [C
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: intern
+        Modifiers: public native
+        Parameter types: NONE
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: checkOffset
+        Modifiers: static
+        Parameter types: int, int
+        Return type: void
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: valueOfCodePoint
+        Modifiers: static
+        Parameter types: int
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: describeConstable
+        Modifiers: public
+        Parameter types: NONE
+        Return type: java.util.Optional
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: lambda$stripIndent$3
+        Modifiers: private static
+        Parameter types: int, java.lang.String
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: lambda$indent$2
+        Modifiers: private static
+        Parameter types: int, java.lang.String
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: lambda$indent$1
+        Modifiers: private static
+        Parameter types: java.lang.String
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+    METHOD
+        Name: lambda$indent$0
+        Modifiers: private static
+        Parameter types: java.lang.String, java.lang.String
+        Return type: java.lang.String
+        Exceptions: NONE
+        Belongs: java.lang.String
+Fields -> 
+    FIELD
+        Name: value
+        Type: [B
+        Modifiers: private final
+        Belongs: java.lang.String
+    FIELD
+        Name: coder
+        Type: byte
+        Modifiers: private final
+        Belongs: java.lang.String
+    FIELD
+        Name: hash
+        Type: int
+        Modifiers: private
+        Belongs: java.lang.String
+    FIELD
+        Name: hashIsZero
+        Type: boolean
+        Modifiers: private
+        Belongs: java.lang.String
+    FIELD
+        Name: serialVersionUID
+        Type: long
+        Modifiers: private static final
+        Belongs: java.lang.String
+    FIELD
+        Name: COMPACT_STRINGS
+        Type: boolean
+        Modifiers: static final
+        Belongs: java.lang.String
+    FIELD
+        Name: serialPersistentFields
+        Type: [Ljava.io.ObjectStreamField;
+        Modifiers: private static final
+        Belongs: java.lang.String
+    FIELD
+        Name: CASE_INSENSITIVE_ORDER
+        Type: java.util.Comparator
+        Modifiers: public static final
+        Belongs: java.lang.String
+    FIELD
+        Name: LATIN1
+        Type: byte
+        Modifiers: static final
+        Belongs: java.lang.String
+    FIELD
+        Name: UTF16
+        Type: byte
+        Modifiers: static final
+        Belongs: java.lang.String
+======================================================
