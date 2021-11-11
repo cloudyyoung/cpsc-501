@@ -57,37 +57,10 @@ public class Inspector {
             this.print("Constructors -> ", depth);
             for (Constructor constructor : constructors) {
                 this.print("CONSTRUCTOR", depth + 1);
-                this.inspectConstructor(constructor, obj, recursive, depth + 2);
+                this.inspectExecutable(constructor, obj, recursive, depth + 2);
             }
         } else {
             this.print("Constructors: NONE", depth);
-        }
-    }
-
-    private void inspectConstructor(Constructor constructor, Object obj, boolean recursive, int depth) {
-        this.print("Name: " + constructor.getName(), depth);
-        this.print("Modifiers: " + Modifier.toString(constructor.getModifiers()), depth);
-
-        // Pamameter types
-        Class[] params = constructor.getParameterTypes();
-        if (params != null && params.length != 0) {
-            String[] params_names = new String[params.length];
-            for (int t = 0; t < params.length; t++) {
-                params_names[t] = params[t].getName();
-            }
-            this.print("Parameter types: " + String.join(", ", params_names), depth);
-        } else {
-            this.print("Parameter types: NONE", depth);
-        }
-
-        Class[] exceptions = constructor.getExceptionTypes();
-        if (exceptions != null && exceptions.length != 0) {
-            this.print("Exceptions -> ", depth);
-            for (Class exception : exceptions) {
-                this.print(exception.getName(), depth + 1);
-            }
-        } else {
-            this.print("Exceptions: NONE", depth);
         }
     }
 
@@ -97,40 +70,10 @@ public class Inspector {
             this.print("Methods -> ", depth);
             for (Method method : methods) {
                 this.print("METHOD", depth + 1);
-                this.inspectMethods(method, obj, recursive, depth + 2);
+                this.inspectExecutable(method, obj, recursive, depth + 2);
             }
         } else {
             this.print("Methods: NONE", depth);
-        }
-    }
-
-    private void inspectMethods(Method method, Object obj, boolean recursive, int depth) {
-        this.print("Name: " + method.getName(), depth);
-        this.print("Modifiers: " + Modifier.toString(method.getModifiers()), depth);
-
-        // Pamameter types
-        Class[] params = method.getParameterTypes();
-        if (params != null && params.length != 0) {
-            String[] params_names = new String[params.length];
-            for (int t = 0; t < params.length; t++) {
-                params_names[t] = params[t].getName();
-            }
-            this.print("Parameter types: " + String.join(", ", params_names), depth);
-        } else {
-            this.print("Parameter types: NONE", depth);
-        }
-
-        this.print("Return type: " + method.getReturnType().getName(), depth);
-
-        Class[] exceptions = method.getExceptionTypes();
-        if (exceptions != null && exceptions.length != 0) {
-            this.print("Exceptions -> ", depth);
-            for (Class exception : exceptions) {
-                this.print(exception.getName(), depth + 1);
-                break;
-            }
-        } else {
-            this.print("Exceptions: NONE", depth);
         }
     }
 
@@ -153,5 +96,39 @@ public class Inspector {
         this.print("Type: " + field.getType().getName(), depth);
         this.print("Modifiers: " + Modifier.toString(field.getModifiers()), depth);
         // this.print("Value: " + field.get(obj).toString(), depth);
+    }
+
+    // https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html
+    private void inspectExecutable(Executable executable, Object obj, boolean recursive, int depth) {
+        this.print("Name: " + executable.getName(), depth);
+        this.print("Modifiers: " + Modifier.toString(executable.getModifiers()), depth);
+
+        // Pamameter types
+        Class[] params = executable.getParameterTypes();
+        if (params != null && params.length != 0) {
+            String[] params_names = new String[params.length];
+            for (int t = 0; t < params.length; t++) {
+                params_names[t] = params[t].getName();
+            }
+            this.print("Parameter types: " + String.join(", ", params_names), depth);
+        } else {
+            this.print("Parameter types: NONE", depth);
+        }
+
+        if (executable instanceof Method) {
+            Method method = (Method) executable;
+            this.print("Return type: " + method.getReturnType().getName(), depth);
+        }
+
+        Class[] exceptions = executable.getExceptionTypes();
+        if (exceptions != null && exceptions.length != 0) {
+            this.print("Exceptions -> ", depth);
+            for (Class exception : exceptions) {
+                this.print(exception.getName(), depth + 1);
+                break;
+            }
+        } else {
+            this.print("Exceptions: NONE", depth);
+        }
     }
 }
