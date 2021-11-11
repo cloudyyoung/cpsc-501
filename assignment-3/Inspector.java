@@ -9,12 +9,33 @@ import java.lang.reflect.*;
 public class Inspector {
 
     public void inspect(Object obj, boolean recursive) {
+
         Class c = obj.getClass();
-        inspectClass(c, obj, recursive, 0);
+        if (c.isArray()) {
+            this.inspectArray(c, obj, recursive, 0);
+        } else {
+            this.inspectClass(c, obj, recursive, 0);
+        }
     }
 
     private void print(String string, int depth) {
         System.out.println("    ".repeat(depth) + string);
+    }
+
+    private void inspectArray(Class c, Object obj, boolean recursive, int depth) {
+        this.print("Name: " + c.getName(), depth);
+        this.print("Type name: " + c.getTypeName(), depth);
+        this.print("Component type: " + c.getComponentType(), depth);
+        this.print("Length: " + Array.getLength(obj), depth);
+        this.print("Entries ->", depth);
+        for (int t = 0; t < Array.getLength(obj); t++) {
+            Object object = Array.get(obj, t);
+            this.print("Value: " + object, depth + 1);
+
+            if (object != null && recursive) {
+                this.inspectClass(object.getClass(), obj, recursive, depth + 2);
+            }
+        }
     }
 
     private void inspectClass(Class c, Object obj, boolean recursive, int depth) {
@@ -37,7 +58,7 @@ public class Inspector {
             this.print("Superclass: NONE", depth);
         }
     }
-    
+
     private void inspectInterfaces(Class[] interfaces, Object obj, boolean recursive, int depth) {
         if (interfaces != null && interfaces.length != 0) {
             this.print("Interfaces ->", depth);
