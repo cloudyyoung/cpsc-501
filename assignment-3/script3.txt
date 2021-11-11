@@ -20,7 +20,6 @@ Superclass ->
                                 Modifiers: public
                                 Parameter types: NONE
                                 Exceptions: NONE
-                                Belongs: java.lang.Object
                         Methods -> 
                             METHOD
                                 Name: finalize
@@ -29,7 +28,6 @@ Superclass ->
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.Throwable
-                                Belongs: java.lang.Object
                             METHOD
                                 Name: wait
                                 Modifiers: public final
@@ -37,7 +35,6 @@ Superclass ->
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.InterruptedException
-                                Belongs: java.lang.Object
                             METHOD
                                 Name: wait
                                 Modifiers: public final
@@ -45,7 +42,6 @@ Superclass ->
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.InterruptedException
-                                Belongs: java.lang.Object
                             METHOD
                                 Name: wait
                                 Modifiers: public final native
@@ -53,35 +49,30 @@ Superclass ->
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.InterruptedException
-                                Belongs: java.lang.Object
                             METHOD
                                 Name: equals
                                 Modifiers: public
                                 Parameter types: java.lang.Object
                                 Return type: boolean
                                 Exceptions: NONE
-                                Belongs: java.lang.Object
                             METHOD
                                 Name: toString
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: java.lang.String
                                 Exceptions: NONE
-                                Belongs: java.lang.Object
                             METHOD
                                 Name: hashCode
                                 Modifiers: public native
                                 Parameter types: NONE
                                 Return type: int
                                 Exceptions: NONE
-                                Belongs: java.lang.Object
                             METHOD
                                 Name: getClass
                                 Modifiers: public final native
                                 Parameter types: NONE
                                 Return type: java.lang.Class
                                 Exceptions: NONE
-                                Belongs: java.lang.Object
                             METHOD
                                 Name: clone
                                 Modifiers: protected native
@@ -89,21 +80,18 @@ Superclass ->
                                 Return type: java.lang.Object
                                 Exceptions -> 
                                     java.lang.CloneNotSupportedException
-                                Belongs: java.lang.Object
                             METHOD
                                 Name: notify
                                 Modifiers: public final native
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                                Belongs: java.lang.Object
                             METHOD
                                 Name: notifyAll
                                 Modifiers: public final native
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                                Belongs: java.lang.Object
                         Fields: NONE 
                 Interfaces: NONE
                 Constructors -> 
@@ -112,13 +100,11 @@ Superclass ->
                         Modifiers: public
                         Parameter types: NONE
                         Exceptions: NONE
-                        Belongs: ClassD
                     CONSTRUCTOR
                         Name: ClassD
                         Modifiers: public
                         Parameter types: int
                         Exceptions: NONE
-                        Belongs: ClassD
                 Methods -> 
                     METHOD
                         Name: toString
@@ -126,35 +112,29 @@ Superclass ->
                         Parameter types: NONE
                         Return type: java.lang.String
                         Exceptions: NONE
-                        Belongs: ClassD
                     METHOD
                         Name: getVal3
                         Modifiers: public
                         Parameter types: NONE
                         Return type: int
                         Exceptions: NONE
-                        Belongs: ClassD
                 Fields -> 
                     FIELD
                         Name: val
                         Type: ClassA
                         Modifiers: private
-                        Belongs: ClassD
                     FIELD
                         Name: val2
                         Type: ClassA
                         Modifiers: private static
-                        Belongs: ClassD
                     FIELD
                         Name: val3
                         Type: int
                         Modifiers: private
-                        Belongs: ClassD
                     FIELD
                         Name: vallarray
                         Type: [LClassA;
                         Modifiers: private
-                        Belongs: ClassD
         Interfaces ->
             INTERFACE
                 Name: InterfaceA
@@ -173,18 +153,9 @@ Superclass ->
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.Exception
-                                Belongs: InterfaceB
                         Fields: NONE 
                 Constructors: NONE
                 Methods -> 
-                    METHOD
-                        Name: func2
-                        Modifiers: public abstract
-                        Parameter types: java.lang.String
-                        Return type: int
-                        Exceptions -> 
-                            java.lang.Exception
-                        Belongs: InterfaceA
                     METHOD
                         Name: func1
                         Modifiers: public abstract
@@ -192,7 +163,13 @@ Superclass ->
                         Return type: void
                         Exceptions -> 
                             java.lang.Exception
-                        Belongs: InterfaceA
+                    METHOD
+                        Name: func2
+                        Modifiers: public abstract
+                        Parameter types: java.lang.String
+                        Return type: int
+                        Exceptions -> 
+                            java.lang.Exception
                 Fields: NONE 
         Constructors -> 
             CONSTRUCTOR
@@ -200,13 +177,11 @@ Superclass ->
                 Modifiers: public
                 Parameter types: NONE
                 Exceptions: NONE
-                Belongs: ClassC
             CONSTRUCTOR
                 Name: ClassC
                 Modifiers: public
                 Parameter types: int, int
                 Exceptions: NONE
-                Belongs: ClassC
         Methods -> 
             METHOD
                 Name: run
@@ -214,22 +189,18 @@ Superclass ->
                 Parameter types: NONE
                 Return type: void
                 Exceptions: NONE
-                Belongs: ClassC
             METHOD
                 Name: toString
                 Modifiers: public
                 Parameter types: NONE
                 Return type: java.lang.String
                 Exceptions: NONE
-                Belongs: ClassC
             METHOD
-                Name: func2
-                Modifiers: public
-                Parameter types: java.lang.String
-                Return type: int
-                Exceptions -> 
-                    java.lang.Exception
-                Belongs: ClassC
+                Name: func3
+                Modifiers: public abstract
+                Parameter types: int
+                Return type: void
+                Exceptions: NONE
             METHOD
                 Name: func1
                 Modifiers: public
@@ -237,7 +208,13 @@ Superclass ->
                 Return type: void
                 Exceptions -> 
                     java.lang.Exception
-                Belongs: ClassC
+            METHOD
+                Name: func2
+                Modifiers: public
+                Parameter types: java.lang.String
+                Return type: int
+                Exceptions -> 
+                    java.lang.Exception
             METHOD
                 Name: func0
                 Modifiers: public
@@ -245,30 +222,19 @@ Superclass ->
                 Return type: void
                 Exceptions -> 
                     java.lang.Exception
-                Belongs: ClassC
-            METHOD
-                Name: func3
-                Modifiers: public abstract
-                Parameter types: int
-                Return type: void
-                Exceptions: NONE
-                Belongs: ClassC
         Fields -> 
             FIELD
                 Name: val2
                 Type: ClassA
                 Modifiers: private
-                Belongs: ClassC
             FIELD
                 Name: val3
                 Type: ClassA
                 Modifiers: private
-                Belongs: ClassC
             FIELD
                 Name: val4
                 Type: ClassA
                 Modifiers: private
-                Belongs: ClassC
 Interfaces ->
     INTERFACE
         Name: java.lang.Runnable
@@ -282,7 +248,6 @@ Interfaces ->
                 Parameter types: NONE
                 Return type: void
                 Exceptions: NONE
-                Belongs: java.lang.Runnable
         Fields: NONE 
 Constructors -> 
     CONSTRUCTOR
@@ -291,7 +256,6 @@ Constructors ->
         Parameter types: NONE
         Exceptions -> 
             java.lang.Exception
-        Belongs: ClassB
 Methods -> 
     METHOD
         Name: run
@@ -299,35 +263,29 @@ Methods ->
         Parameter types: NONE
         Return type: void
         Exceptions: NONE
-        Belongs: ClassB
     METHOD
         Name: toString
         Modifiers: public
         Parameter types: NONE
         Return type: java.lang.String
         Exceptions: NONE
-        Belongs: ClassB
     METHOD
         Name: func3
         Modifiers: public
         Parameter types: int
         Return type: void
         Exceptions: NONE
-        Belongs: ClassB
 Fields -> 
     FIELD
         Name: val
         Type: ClassA
         Modifiers: private
-        Belongs: ClassB
     FIELD
         Name: val2
         Type: ClassA
         Modifiers: private
-        Belongs: ClassB
     FIELD
         Name: val3
         Type: ClassA
         Modifiers: private
-        Belongs: ClassB
 ======================================================
