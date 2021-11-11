@@ -71,8 +71,6 @@ public class Inspector {
                 } else {
                     this.print("Exceptions: NONE", depth + 2);
                 }
-
-                this.print("Belongs: " + c.getName(), depth + 2);
             }
         } else {
             this.print("Constructors: NONE", depth);
@@ -111,7 +109,6 @@ public class Inspector {
                     this.print("Exceptions: NONE", depth + 2);
                 }
 
-                this.print("Belongs: " + c.getName(), depth + 2);
             }
         } else {
             this.print("Methods: NONE", depth);
@@ -127,7 +124,6 @@ public class Inspector {
                 this.print("Type: " + field.getType().getName(), depth + 2);
                 this.print("Modifiers: " + Modifier.toString(field.getModifiers()), depth + 2);
                 // this.print("Value: " + field.get(obj).toString(), depth + 2);
-                this.print("Belongs: " + c.getName(), depth + 2);
             }
         } else {
             this.print("Fields: NONE ", depth);
