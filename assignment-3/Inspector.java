@@ -32,7 +32,7 @@ public class Inspector {
         if (c != null) {
             this.print("Superclass -> ", depth);
             this.print("SUPERCLASS", depth + 1);
-            this.inspectClass(c.getSuperclass(), obj, recursive, depth + 2);
+            this.inspectClass(c, obj, recursive, depth + 2);
         } else {
             this.print("Superclass: NONE", depth);
         }
