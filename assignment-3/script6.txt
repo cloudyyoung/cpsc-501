@@ -1,10 +1,11 @@
 ======================================================
 Filename: script6.txt
-Running Test: [LClassB;@2ff4acd0
+Running Test: [LClassB;@452b3a41
 Recursive: true
 Name: [LClassB;
 Type name: ClassB[]
 Component type: class ClassB
+Modifiers: public abstract final
 Length: 12
 Entries ->
     Value: null

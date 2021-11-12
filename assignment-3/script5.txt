@@ -117,16 +117,32 @@ Fields ->
         Name: val
         Type: ClassA
         Modifiers: private
+        Value: ClassA
     FIELD
         Name: val2
         Type: ClassA
         Modifiers: private static
+        Value: null
     FIELD
         Name: val3
         Type: int
         Modifiers: private
+        Value: 34
     FIELD
-        Name: vallarray
-        Type: [LClassA;
-        Modifiers: private
+        Name: [LClassA;
+        Type name: ClassA[]
+        Component type: class ClassA
+        Modifiers: public abstract final
+        Length: 10
+        Entries ->
+            Value: null
+            Value: null
+            Value: null
+            Value: null
+            Value: null
+            Value: null
+            Value: null
+            Value: null
+            Value: null
+            Value: null
 ======================================================

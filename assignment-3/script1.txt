@@ -133,18 +133,18 @@ Methods ->
         Return type: java.lang.String
         Exceptions: NONE
     METHOD
-        Name: getVal
-        Modifiers: public
-        Parameter types: NONE
-        Return type: int
-        Exceptions: NONE
-    METHOD
         Name: setVal
         Modifiers: public
         Parameter types: int
         Return type: void
         Exceptions -> 
             java.lang.Exception
+    METHOD
+        Name: getVal
+        Modifiers: public
+        Parameter types: NONE
+        Return type: int
+        Exceptions: NONE
     METHOD
         Name: printSomething
         Modifiers: private
@@ -156,12 +156,15 @@ Fields ->
         Name: val
         Type: int
         Modifiers: private
+        Value: 3
     FIELD
         Name: val2
         Type: double
         Modifiers: private
+        Value: 0.2
     FIELD
         Name: val3
         Type: boolean
         Modifiers: private
+        Value: true
 ======================================================

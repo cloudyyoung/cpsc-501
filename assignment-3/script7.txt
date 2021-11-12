@@ -1,10 +1,11 @@
 ======================================================
 Filename: script7.txt
-Running Test: [LClassB;@54bedef2
+Running Test: [LClassB;@4a574795
 Recursive: true
 Name: [LClassB;
 Type name: ClassB[]
 Component type: class ClassB
+Modifiers: public abstract final
 Length: 12
 Entries ->
     Value: null
@@ -129,21 +130,28 @@ Entries ->
                                 Exceptions: NONE
                         Fields -> 
                             FIELD
+ERROR
                                 Name: val
                                 Type: ClassA
                                 Modifiers: private
+                                Value: null
                             FIELD
                                 Name: val2
                                 Type: ClassA
                                 Modifiers: private static
+                                Value: null
                             FIELD
+ERROR
                                 Name: val3
                                 Type: int
                                 Modifiers: private
+                                Value: null
                             FIELD
+ERROR
                                 Name: vallarray
                                 Type: [LClassA;
                                 Modifiers: private
+                                Value: null
                 Interfaces ->
                     INTERFACE
                         Name: InterfaceA
@@ -166,17 +174,17 @@ Entries ->
                         Constructors: NONE
                         Methods -> 
                             METHOD
-                                Name: func2
-                                Modifiers: public abstract
-                                Parameter types: java.lang.String
-                                Return type: int
-                                Exceptions -> 
-                                    java.lang.Exception
-                            METHOD
                                 Name: func1
                                 Modifiers: public abstract
                                 Parameter types: int, double, boolean, java.lang.String
                                 Return type: void
+                                Exceptions -> 
+                                    java.lang.Exception
+                            METHOD
+                                Name: func2
+                                Modifiers: public abstract
+                                Parameter types: java.lang.String
+                                Return type: int
                                 Exceptions -> 
                                     java.lang.Exception
                         Fields: NONE 
@@ -205,9 +213,15 @@ Entries ->
                         Return type: java.lang.String
                         Exceptions: NONE
                     METHOD
-                        Name: func0
+                        Name: func3
+                        Modifiers: public abstract
+                        Parameter types: int
+                        Return type: void
+                        Exceptions: NONE
+                    METHOD
+                        Name: func1
                         Modifiers: public
-                        Parameter types: int, boolean
+                        Parameter types: int, double, boolean, java.lang.String
                         Return type: void
                         Exceptions -> 
                             java.lang.Exception
@@ -219,31 +233,31 @@ Entries ->
                         Exceptions -> 
                             java.lang.Exception
                     METHOD
-                        Name: func1
+                        Name: func0
                         Modifiers: public
-                        Parameter types: int, double, boolean, java.lang.String
+                        Parameter types: int, boolean
                         Return type: void
                         Exceptions -> 
                             java.lang.Exception
-                    METHOD
-                        Name: func3
-                        Modifiers: public abstract
-                        Parameter types: int
-                        Return type: void
-                        Exceptions: NONE
                 Fields -> 
                     FIELD
+ERROR
                         Name: val2
                         Type: ClassA
                         Modifiers: private
+                        Value: null
                     FIELD
+ERROR
                         Name: val3
                         Type: ClassA
                         Modifiers: private
+                        Value: null
                     FIELD
+ERROR
                         Name: val4
                         Type: ClassA
                         Modifiers: private
+                        Value: null
         Interfaces ->
             INTERFACE
                 Name: java.lang.Runnable
@@ -286,17 +300,23 @@ Entries ->
                 Exceptions: NONE
         Fields -> 
             FIELD
+ERROR
                 Name: val
                 Type: ClassA
                 Modifiers: private
+                Value: null
             FIELD
+ERROR
                 Name: val2
                 Type: ClassA
                 Modifiers: private
+                Value: null
             FIELD
+ERROR
                 Name: val3
                 Type: ClassA
                 Modifiers: private
+                Value: null
     Value: null
     Value: null
     Value: null

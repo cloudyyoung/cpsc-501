@@ -915,43 +915,62 @@ Methods ->
         Exceptions: NONE
 Fields -> 
     FIELD
+ERROR
         Name: value
         Type: [B
         Modifiers: private final
+        Value: null
     FIELD
+ERROR
         Name: coder
         Type: byte
         Modifiers: private final
+        Value: null
     FIELD
+ERROR
         Name: hash
         Type: int
         Modifiers: private
+        Value: null
     FIELD
+ERROR
         Name: hashIsZero
         Type: boolean
         Modifiers: private
+        Value: null
     FIELD
+ERROR
         Name: serialVersionUID
         Type: long
         Modifiers: private static final
+        Value: null
     FIELD
+ERROR
         Name: COMPACT_STRINGS
         Type: boolean
         Modifiers: static final
+        Value: null
     FIELD
+ERROR
         Name: serialPersistentFields
         Type: [Ljava.io.ObjectStreamField;
         Modifiers: private static final
+        Value: null
     FIELD
         Name: CASE_INSENSITIVE_ORDER
         Type: java.util.Comparator
         Modifiers: public static final
+        Value: java.lang.String$CaseInsensitiveComparator@6b884d57
     FIELD
+ERROR
         Name: LATIN1
         Type: byte
         Modifiers: static final
+        Value: null
     FIELD
+ERROR
         Name: UTF16
         Type: byte
         Modifiers: static final
+        Value: null
 ======================================================
