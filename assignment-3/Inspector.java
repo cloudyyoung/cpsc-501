@@ -22,22 +22,6 @@ public class Inspector {
         System.out.println("    ".repeat(depth) + string);
     }
 
-    private void inspectArray(Class c, Object obj, boolean recursive, int depth) {
-        this.print("Name: " + c.getName(), depth);
-        this.print("Type name: " + c.getTypeName(), depth);
-        this.print("Component type: " + c.getComponentType(), depth);
-        this.print("Length: " + Array.getLength(obj), depth);
-        this.print("Entries ->", depth);
-        for (int t = 0; t < Array.getLength(obj); t++) {
-            Object object = Array.get(obj, t);
-            this.print("Value: " + object, depth + 1);
-
-            if (object != null && recursive) {
-                this.inspectClass(object.getClass(), obj, recursive, depth + 2);
-            }
-        }
-    }
-
     private void inspectClass(Class c, Object obj, boolean recursive, int depth) {
         // note: depth will be needed to capture the output indentation level
         this.print("Name: " + c.getName(), depth);
@@ -113,6 +97,22 @@ public class Inspector {
         this.print("Type: " + field.getType().getName(), depth);
         this.print("Modifiers: " + Modifier.toString(field.getModifiers()), depth);
         // this.print("Value: " + field.get(obj).toString(), depth);
+    }
+
+    private void inspectArray(Class c, Object obj, boolean recursive, int depth) {
+        this.print("Name: " + c.getName(), depth);
+        this.print("Type name: " + c.getTypeName(), depth);
+        this.print("Component type: " + c.getComponentType(), depth);
+        this.print("Length: " + Array.getLength(obj), depth);
+        this.print("Entries ->", depth);
+        for (int t = 0; t < Array.getLength(obj); t++) {
+            Object object = Array.get(obj, t);
+            this.print("Value: " + object, depth + 1);
+
+            if (object != null && recursive) {
+                this.inspectClass(object.getClass(), obj, recursive, depth + 2);
+            }
+        }
     }
 
     // https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html
