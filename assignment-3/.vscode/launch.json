@@ -9,7 +9,8 @@
             "name": "Launch Driver",
             "request": "launch",
             "mainClass": "Driver",
-            "projectName": "assignment-3_91f6b8d7"
+            "projectName": "assignment-3_91f6b8d7",
+            "vmArgs": "--add-opens java.base/java.lang=ALL-UNNAMED"
         }
     ]
 }
