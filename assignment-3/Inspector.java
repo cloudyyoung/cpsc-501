@@ -11,7 +11,7 @@ public class Inspector {
     public void inspect(Object obj, boolean recursive) {
         Class c = obj.getClass();
         if (c.isArray()) {
-            this.inspectArray(c, obj, recursive, 0);
+            this.inspectArray(obj, recursive, 0);
         } else {
             this.inspectClass(c, obj, recursive, 0);
         }
@@ -97,12 +97,12 @@ public class Inspector {
                 try{
                     field.setAccessible(true);
                     value = field.get(obj);
-                }catch(Exception e){
-                    System.out.println("ERROR");
+                } catch (Exception e) {
+                    this.print("ERROR", depth + 2);
                 }
 
                 if (isArray && value != null) {
-                    this.inspectArray(field.getType(), value, recursive, depth + 2);
+                    this.inspectArray(value, recursive, depth + 2);
                 } else {
                     this.inspectField(field, value, recursive, depth + 2);
                 }
@@ -119,7 +119,8 @@ public class Inspector {
         this.print("Value: " + value, depth);
     }
 
-    private void inspectArray(Class c, Object array, boolean recursive, int depth) {
+    private void inspectArray(Object array, boolean recursive, int depth) {
+        Class c = array.getClass();
         this.print("Name: " + c.getName(), depth);
         this.print("Type name: " + c.getTypeName(), depth);
         this.print("Component type: " + c.getComponentType(), depth);
@@ -129,6 +130,7 @@ public class Inspector {
 
         for (int t = 0; t < Array.getLength(array); t++) {
             Object object = Array.get(array, t);
+            
             this.print("Value: " + object, depth + 1);
 
             if (object != null && recursive && object.getClass() != null) {
