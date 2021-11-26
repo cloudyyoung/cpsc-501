@@ -9,16 +9,19 @@ import java.lang.reflect.*;
 public class Inspector {
 
     public void inspect(Object obj, boolean recursive) {
-        Class c = obj.getClass();
-        if (c.isArray()) {
+        if (obj.getClass().isArray()) {
             this.inspectArray(obj, recursive, 0);
         } else {
-            this.inspectClass(c, obj, recursive, 0);
+            this.inspectClass(obj, recursive, 0);
         }
     }
 
     private void print(String string, int depth) {
         System.out.println("    ".repeat(depth) + string);
+    }
+
+    private void inspectClass(Object obj, boolean recursive, int depth) {
+        this.inspectClass(obj.getClass(), obj, recursive, depth);
     }
 
     private void inspectClass(Class c, Object obj, boolean recursive, int depth) {
@@ -105,7 +108,7 @@ public class Inspector {
             field.setAccessible(true);
             value = field.get(obj);
         } catch (Exception e) {
-            this.print("ERROR", depth + 2);
+            this.print("ERROR", depth + 1);
             return;
         }
 
@@ -135,7 +138,8 @@ public class Inspector {
                 this.print("Value: " + object, depth + 1);
 
                 if (object != null && recursive && object.getClass() != null) {
-                    this.inspectClass(object.getClass(), array, recursive, depth + 2);
+                    this.print("CLASS", depth + 2);
+                    this.inspectClass(object.getClass(), array, recursive, depth + 3);
                 }
             }
         }
