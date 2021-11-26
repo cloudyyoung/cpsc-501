@@ -89,34 +89,56 @@ public class Inspector {
             this.print("Fields -> ", depth);
             for (Field field : fields) {
                 this.print("FIELD", depth + 1);
-
-                Class fieldType = field.getType();
-                boolean isArray = fieldType.isArray();
-                Object value = null;
-
-                try{
-                    field.setAccessible(true);
-                    value = field.get(obj);
-                } catch (Exception e) {
-                    this.print("ERROR", depth + 2);
-                }
-
-                if (isArray && value != null) {
-                    this.inspectArray(value, recursive, depth + 2);
-                } else {
-                    this.inspectField(field, value, recursive, depth + 2);
-                }
+                this.inspectField(field, obj, recursive, depth + 2);
             }
         } else {
             this.print("Fields: NONE ", depth);
         }
     }
 
-    private void inspectField(Field field, Object value, boolean recursive, int depth) {
+    private void inspectField(Field field, Object obj, boolean recursive, int depth) {
+        Class fieldType = field.getType();
+        boolean isArray = fieldType.isArray();
+        Object value = null;
+
+        try {
+            field.setAccessible(true);
+            value = field.get(obj);
+        } catch (Exception e) {
+            this.print("ERROR", depth + 2);
+            return;
+        }
+
         this.print("Name: " + field.getName(), depth);
         this.print("Type: " + field.getType().getName(), depth);
         this.print("Modifiers: " + Modifier.toString(field.getModifiers()), depth);
+
+        if (isArray) {
+            this.inspectArrayValues(value, false, depth);
+        } else {
+            this.inspectPrimitiveValue(value, depth);
+        }
+    }
+
+    private void inspectPrimitiveValue(Object value, int depth) {
         this.print("Value: " + value, depth);
+    }
+
+    private void inspectArrayValues(Object array, boolean recursive, int depth) {
+        this.print("Length: " + Array.getLength(array), depth);
+        this.print("Entries ->", depth);
+
+        if (array != null) {
+            for (int t = 0; t < Array.getLength(array); t++) {
+                Object object = Array.get(array, t);
+
+                this.print("Value: " + object, depth + 1);
+
+                if (object != null && recursive && object.getClass() != null) {
+                    this.inspectClass(object.getClass(), array, recursive, depth + 2);
+                }
+            }
+        }
     }
 
     private void inspectArray(Object array, boolean recursive, int depth) {
@@ -125,18 +147,7 @@ public class Inspector {
         this.print("Type name: " + c.getTypeName(), depth);
         this.print("Component type: " + c.getComponentType(), depth);
         this.print("Modifiers: " + Modifier.toString(c.getModifiers()), depth);
-        this.print("Length: " + Array.getLength(array), depth);
-        this.print("Entries ->", depth);
-
-        for (int t = 0; t < Array.getLength(array); t++) {
-            Object object = Array.get(array, t);
-            
-            this.print("Value: " + object, depth + 1);
-
-            if (object != null && recursive && object.getClass() != null) {
-                this.inspectClass(object.getClass(), array, recursive, depth + 2);
-            }
-        }
+        this.inspectArrayValues(array, recursive, depth);
     }
 
     // https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html
