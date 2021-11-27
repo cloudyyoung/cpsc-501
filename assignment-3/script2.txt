@@ -25,7 +25,7 @@ Superclass ->
             METHOD
                 Name: wait
                 Modifiers: public final
-                Parameter types: long, int
+                Parameter types: [long, int]
                 Return type: void
                 Exceptions -> 
                     java.lang.InterruptedException
@@ -39,14 +39,14 @@ Superclass ->
             METHOD
                 Name: wait
                 Modifiers: public final native
-                Parameter types: long
+                Parameter types: [long]
                 Return type: void
                 Exceptions -> 
                     java.lang.InterruptedException
             METHOD
                 Name: equals
                 Modifiers: public
-                Parameter types: java.lang.Object
+                Parameter types: [java.lang.Object]
                 Return type: boolean
                 Exceptions: NONE
             METHOD
@@ -117,7 +117,7 @@ Constructors ->
     CONSTRUCTOR
         Name: ClassA
         Modifiers: public
-        Parameter types: int
+        Parameter types: [int]
         Exceptions: NONE
 Methods -> 
     METHOD
@@ -133,18 +133,18 @@ Methods ->
         Return type: java.lang.String
         Exceptions: NONE
     METHOD
-        Name: setVal
-        Modifiers: public
-        Parameter types: int
-        Return type: void
-        Exceptions -> 
-            java.lang.Exception
-    METHOD
         Name: getVal
         Modifiers: public
         Parameter types: NONE
         Return type: int
         Exceptions: NONE
+    METHOD
+        Name: setVal
+        Modifiers: public
+        Parameter types: [int]
+        Return type: void
+        Exceptions -> 
+            java.lang.Exception
     METHOD
         Name: printSomething
         Modifiers: private
