@@ -131,7 +131,7 @@ public class Inspector {
             if (this.isWrapperType(c)) {
                 this.print("Value: " + obj, depth);
             } else {
-                this.print("Value: " + c.getName(), depth);
+                this.print("Value (ref): " + c.getName() + '@' + Integer.toHexString(obj.hashCode()), depth);
                 this.inspectClass(c, obj, recursive, depth);
             }
         }
