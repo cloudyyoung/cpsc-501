@@ -4,89 +4,89 @@ Running Test: ClassB
 Recursive: true
 Name: ClassB
 Superclass -> 
-    SUPERCLASS
+    SUPERCLASS (ClassB)
         Name: ClassC
         Superclass -> 
-            SUPERCLASS
+            SUPERCLASS (ClassC)
                 Name: ClassD
                 Superclass -> 
-                    SUPERCLASS
+                    SUPERCLASS (ClassD)
                         Name: java.lang.Object
                         Superclass: NONE
                         Interfaces: NONE
                         Constructors -> 
-                            CONSTRUCTOR
+                            CONSTRUCTOR (java.lang.Object)
                                 Name: java.lang.Object
                                 Modifiers: public
                                 Parameter types: NONE
                                 Exceptions: NONE
                         Methods -> 
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: finalize
                                 Modifiers: protected
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.Throwable
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: wait
                                 Modifiers: public final
                                 Parameter types: [long, int]
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.InterruptedException
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: wait
                                 Modifiers: public final
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.InterruptedException
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: wait
                                 Modifiers: public final native
                                 Parameter types: [long]
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.InterruptedException
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: equals
                                 Modifiers: public
                                 Parameter types: [java.lang.Object]
                                 Return type: boolean
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: toString
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: java.lang.String
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: hashCode
                                 Modifiers: public native
                                 Parameter types: NONE
                                 Return type: int
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: getClass
                                 Modifiers: public final native
                                 Parameter types: NONE
                                 Return type: java.lang.Class
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: clone
                                 Modifiers: protected native
                                 Parameter types: NONE
                                 Return type: java.lang.Object
                                 Exceptions -> 
                                     java.lang.CloneNotSupportedException
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: notify
                                 Modifiers: public final native
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: notifyAll
                                 Modifiers: public final native
                                 Parameter types: NONE
@@ -95,31 +95,31 @@ Superclass ->
                         Fields: NONE 
                 Interfaces: NONE
                 Constructors -> 
-                    CONSTRUCTOR
+                    CONSTRUCTOR (ClassD)
                         Name: ClassD
                         Modifiers: public
                         Parameter types: NONE
                         Exceptions: NONE
-                    CONSTRUCTOR
+                    CONSTRUCTOR (ClassD)
                         Name: ClassD
                         Modifiers: public
                         Parameter types: [int]
                         Exceptions: NONE
                 Methods -> 
-                    METHOD
+                    METHOD (ClassD)
                         Name: toString
                         Modifiers: public
                         Parameter types: NONE
                         Return type: java.lang.String
                         Exceptions: NONE
-                    METHOD
+                    METHOD (ClassD)
                         Name: getVal3
                         Modifiers: public
                         Parameter types: NONE
                         Return type: int
                         Exceptions: NONE
                 Fields -> 
-                    FIELD
+                    FIELD (ClassD)
                         Name: val
                         Type: ClassA
                         Modifiers: private
@@ -127,83 +127,83 @@ Superclass ->
                             CLASS
                                 Name: ClassA
                                 Superclass -> 
-                                    SUPERCLASS
+                                    SUPERCLASS (ClassA)
                                         Name: java.lang.Object
                                         Superclass: NONE
                                         Interfaces: NONE
                                         Constructors -> 
-                                            CONSTRUCTOR
+                                            CONSTRUCTOR (java.lang.Object)
                                                 Name: java.lang.Object
                                                 Modifiers: public
                                                 Parameter types: NONE
                                                 Exceptions: NONE
                                         Methods -> 
-                                            METHOD
+                                            METHOD (java.lang.Object)
                                                 Name: finalize
                                                 Modifiers: protected
                                                 Parameter types: NONE
                                                 Return type: void
                                                 Exceptions -> 
                                                     java.lang.Throwable
-                                            METHOD
+                                            METHOD (java.lang.Object)
                                                 Name: wait
                                                 Modifiers: public final
                                                 Parameter types: [long, int]
                                                 Return type: void
                                                 Exceptions -> 
                                                     java.lang.InterruptedException
-                                            METHOD
+                                            METHOD (java.lang.Object)
                                                 Name: wait
                                                 Modifiers: public final
                                                 Parameter types: NONE
                                                 Return type: void
                                                 Exceptions -> 
                                                     java.lang.InterruptedException
-                                            METHOD
+                                            METHOD (java.lang.Object)
                                                 Name: wait
                                                 Modifiers: public final native
                                                 Parameter types: [long]
                                                 Return type: void
                                                 Exceptions -> 
                                                     java.lang.InterruptedException
-                                            METHOD
+                                            METHOD (java.lang.Object)
                                                 Name: equals
                                                 Modifiers: public
                                                 Parameter types: [java.lang.Object]
                                                 Return type: boolean
                                                 Exceptions: NONE
-                                            METHOD
+                                            METHOD (java.lang.Object)
                                                 Name: toString
                                                 Modifiers: public
                                                 Parameter types: NONE
                                                 Return type: java.lang.String
                                                 Exceptions: NONE
-                                            METHOD
+                                            METHOD (java.lang.Object)
                                                 Name: hashCode
                                                 Modifiers: public native
                                                 Parameter types: NONE
                                                 Return type: int
                                                 Exceptions: NONE
-                                            METHOD
+                                            METHOD (java.lang.Object)
                                                 Name: getClass
                                                 Modifiers: public final native
                                                 Parameter types: NONE
                                                 Return type: java.lang.Class
                                                 Exceptions: NONE
-                                            METHOD
+                                            METHOD (java.lang.Object)
                                                 Name: clone
                                                 Modifiers: protected native
                                                 Parameter types: NONE
                                                 Return type: java.lang.Object
                                                 Exceptions -> 
                                                     java.lang.CloneNotSupportedException
-                                            METHOD
+                                            METHOD (java.lang.Object)
                                                 Name: notify
                                                 Modifiers: public final native
                                                 Parameter types: NONE
                                                 Return type: void
                                                 Exceptions: NONE
-                                            METHOD
+                                            METHOD (java.lang.Object)
                                                 Name: notifyAll
                                                 Modifiers: public final native
                                                 Parameter types: NONE
@@ -211,20 +211,20 @@ Superclass ->
                                                 Exceptions: NONE
                                         Fields: NONE 
                                 Interfaces ->
-                                    INTERFACE
+                                    INTERFACE (ClassA)
                                         Name: java.io.Serializable
                                         Superclass: NONE
                                         Interfaces: NONE
                                         Constructors: NONE
                                         Methods: NONE
                                         Fields: NONE 
-                                    INTERFACE
+                                    INTERFACE (ClassA)
                                         Name: java.lang.Runnable
                                         Superclass: NONE
                                         Interfaces: NONE
                                         Constructors: NONE
                                         Methods -> 
-                                            METHOD
+                                            METHOD (java.lang.Runnable)
                                                 Name: run
                                                 Modifiers: public abstract
                                                 Parameter types: NONE
@@ -232,75 +232,75 @@ Superclass ->
                                                 Exceptions: NONE
                                         Fields: NONE 
                                 Constructors -> 
-                                    CONSTRUCTOR
+                                    CONSTRUCTOR (ClassA)
                                         Name: ClassA
                                         Modifiers: public
                                         Parameter types: NONE
                                         Exceptions: NONE
-                                    CONSTRUCTOR
+                                    CONSTRUCTOR (ClassA)
                                         Name: ClassA
                                         Modifiers: public
                                         Parameter types: [int]
                                         Exceptions: NONE
                                 Methods -> 
-                                    METHOD
+                                    METHOD (ClassA)
                                         Name: run
                                         Modifiers: public
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (ClassA)
                                         Name: toString
                                         Modifiers: public
                                         Parameter types: NONE
                                         Return type: java.lang.String
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (ClassA)
                                         Name: getVal
                                         Modifiers: public
                                         Parameter types: NONE
                                         Return type: int
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (ClassA)
+                                        Name: printSomething
+                                        Modifiers: private
+                                        Parameter types: NONE
+                                        Return type: void
+                                        Exceptions: NONE
+                                    METHOD (ClassA)
                                         Name: setVal
                                         Modifiers: public
                                         Parameter types: [int]
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.Exception
-                                    METHOD
-                                        Name: printSomething
-                                        Modifiers: private
-                                        Parameter types: NONE
-                                        Return type: void
-                                        Exceptions: NONE
                                 Fields -> 
-                                    FIELD
+                                    FIELD (ClassA)
                                         Name: val
                                         Type: int
                                         Modifiers: private
                                         Value: 17
-                                    FIELD
+                                    FIELD (ClassA)
                                         Name: val2
                                         Type: double
                                         Modifiers: private
                                         Value: 0.2
-                                    FIELD
+                                    FIELD (ClassA)
                                         Name: val3
                                         Type: boolean
                                         Modifiers: private
                                         Value: true
-                    FIELD
+                    FIELD (ClassD)
                         Name: val2
                         Type: ClassA
                         Modifiers: private static
                         Value: null
-                    FIELD
+                    FIELD (ClassD)
                         Name: val3
                         Type: int
                         Modifiers: private
                         Value: 34
-                    FIELD
+                    FIELD (ClassD)
                         Name: vallarray
                         Type: [LClassA;
                         Modifiers: private
@@ -317,17 +317,17 @@ Superclass ->
                             Value: null
                             Value: null
         Interfaces ->
-            INTERFACE
+            INTERFACE (ClassC)
                 Name: InterfaceA
                 Superclass: NONE
                 Interfaces ->
-                    INTERFACE
+                    INTERFACE (InterfaceA)
                         Name: InterfaceB
                         Superclass: NONE
                         Interfaces: NONE
                         Constructors: NONE
                         Methods -> 
-                            METHOD
+                            METHOD (InterfaceB)
                                 Name: func0
                                 Modifiers: public abstract
                                 Parameter types: [int, boolean]
@@ -337,14 +337,14 @@ Superclass ->
                         Fields: NONE 
                 Constructors: NONE
                 Methods -> 
-                    METHOD
+                    METHOD (InterfaceA)
                         Name: func1
                         Modifiers: public abstract
                         Parameter types: [int, double, boolean, java.lang.String]
                         Return type: void
                         Exceptions -> 
                             java.lang.Exception
-                    METHOD
+                    METHOD (InterfaceA)
                         Name: func2
                         Modifiers: public abstract
                         Parameter types: [java.lang.String]
@@ -355,50 +355,43 @@ Superclass ->
                             java.lang.IllegalMonitorStateException
                 Fields: NONE 
         Constructors -> 
-            CONSTRUCTOR
+            CONSTRUCTOR (ClassC)
                 Name: ClassC
                 Modifiers: public
                 Parameter types: NONE
                 Exceptions: NONE
-            CONSTRUCTOR
+            CONSTRUCTOR (ClassC)
                 Name: ClassC
                 Modifiers: public
                 Parameter types: [int, int]
                 Exceptions: NONE
         Methods -> 
-            METHOD
+            METHOD (ClassC)
                 Name: run
                 Modifiers: public
                 Parameter types: NONE
                 Return type: void
                 Exceptions: NONE
-            METHOD
+            METHOD (ClassC)
                 Name: toString
                 Modifiers: public
                 Parameter types: NONE
                 Return type: java.lang.String
                 Exceptions: NONE
-            METHOD
-                Name: func0
-                Modifiers: public
-                Parameter types: [int, boolean]
-                Return type: void
-                Exceptions -> 
-                    java.lang.Exception
-            METHOD
+            METHOD (ClassC)
                 Name: func3
                 Modifiers: public abstract
                 Parameter types: [int]
                 Return type: void
                 Exceptions: NONE
-            METHOD
+            METHOD (ClassC)
                 Name: func1
                 Modifiers: public
                 Parameter types: [int, double, boolean, java.lang.String]
                 Return type: void
                 Exceptions -> 
                     java.lang.Exception
-            METHOD
+            METHOD (ClassC)
                 Name: func2
                 Modifiers: public
                 Parameter types: [java.lang.String]
@@ -407,8 +400,15 @@ Superclass ->
                     java.lang.Exception
                     java.lang.ArithmeticException
                     java.lang.IllegalMonitorStateException
+            METHOD (ClassC)
+                Name: func0
+                Modifiers: public
+                Parameter types: [int, boolean]
+                Return type: void
+                Exceptions -> 
+                    java.lang.Exception
         Fields -> 
-            FIELD
+            FIELD (ClassC)
                 Name: val2
                 Type: ClassA
                 Modifiers: private
@@ -416,83 +416,83 @@ Superclass ->
                     CLASS
                         Name: ClassA
                         Superclass -> 
-                            SUPERCLASS
+                            SUPERCLASS (ClassA)
                                 Name: java.lang.Object
                                 Superclass: NONE
                                 Interfaces: NONE
                                 Constructors -> 
-                                    CONSTRUCTOR
+                                    CONSTRUCTOR (java.lang.Object)
                                         Name: java.lang.Object
                                         Modifiers: public
                                         Parameter types: NONE
                                         Exceptions: NONE
                                 Methods -> 
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: finalize
                                         Modifiers: protected
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.Throwable
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: wait
                                         Modifiers: public final
                                         Parameter types: [long, int]
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.InterruptedException
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: wait
                                         Modifiers: public final
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.InterruptedException
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: wait
                                         Modifiers: public final native
                                         Parameter types: [long]
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.InterruptedException
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: equals
                                         Modifiers: public
                                         Parameter types: [java.lang.Object]
                                         Return type: boolean
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: toString
                                         Modifiers: public
                                         Parameter types: NONE
                                         Return type: java.lang.String
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: hashCode
                                         Modifiers: public native
                                         Parameter types: NONE
                                         Return type: int
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: getClass
                                         Modifiers: public final native
                                         Parameter types: NONE
                                         Return type: java.lang.Class
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: clone
                                         Modifiers: protected native
                                         Parameter types: NONE
                                         Return type: java.lang.Object
                                         Exceptions -> 
                                             java.lang.CloneNotSupportedException
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: notify
                                         Modifiers: public final native
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: notifyAll
                                         Modifiers: public final native
                                         Parameter types: NONE
@@ -500,20 +500,20 @@ Superclass ->
                                         Exceptions: NONE
                                 Fields: NONE 
                         Interfaces ->
-                            INTERFACE
+                            INTERFACE (ClassA)
                                 Name: java.io.Serializable
                                 Superclass: NONE
                                 Interfaces: NONE
                                 Constructors: NONE
                                 Methods: NONE
                                 Fields: NONE 
-                            INTERFACE
+                            INTERFACE (ClassA)
                                 Name: java.lang.Runnable
                                 Superclass: NONE
                                 Interfaces: NONE
                                 Constructors: NONE
                                 Methods -> 
-                                    METHOD
+                                    METHOD (java.lang.Runnable)
                                         Name: run
                                         Modifiers: public abstract
                                         Parameter types: NONE
@@ -521,65 +521,65 @@ Superclass ->
                                         Exceptions: NONE
                                 Fields: NONE 
                         Constructors -> 
-                            CONSTRUCTOR
+                            CONSTRUCTOR (ClassA)
                                 Name: ClassA
                                 Modifiers: public
                                 Parameter types: NONE
                                 Exceptions: NONE
-                            CONSTRUCTOR
+                            CONSTRUCTOR (ClassA)
                                 Name: ClassA
                                 Modifiers: public
                                 Parameter types: [int]
                                 Exceptions: NONE
                         Methods -> 
-                            METHOD
+                            METHOD (ClassA)
                                 Name: run
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (ClassA)
                                 Name: toString
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: java.lang.String
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (ClassA)
                                 Name: getVal
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: int
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (ClassA)
+                                Name: printSomething
+                                Modifiers: private
+                                Parameter types: NONE
+                                Return type: void
+                                Exceptions: NONE
+                            METHOD (ClassA)
                                 Name: setVal
                                 Modifiers: public
                                 Parameter types: [int]
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.Exception
-                            METHOD
-                                Name: printSomething
-                                Modifiers: private
-                                Parameter types: NONE
-                                Return type: void
-                                Exceptions: NONE
                         Fields -> 
-                            FIELD
+                            FIELD (ClassA)
                                 Name: val
                                 Type: int
                                 Modifiers: private
                                 Value: 100
-                            FIELD
+                            FIELD (ClassA)
                                 Name: val2
                                 Type: double
                                 Modifiers: private
                                 Value: 0.2
-                            FIELD
+                            FIELD (ClassA)
                                 Name: val3
                                 Type: boolean
                                 Modifiers: private
                                 Value: true
-            FIELD
+            FIELD (ClassC)
                 Name: val3
                 Type: ClassA
                 Modifiers: private
@@ -587,83 +587,83 @@ Superclass ->
                     CLASS
                         Name: ClassA
                         Superclass -> 
-                            SUPERCLASS
+                            SUPERCLASS (ClassA)
                                 Name: java.lang.Object
                                 Superclass: NONE
                                 Interfaces: NONE
                                 Constructors -> 
-                                    CONSTRUCTOR
+                                    CONSTRUCTOR (java.lang.Object)
                                         Name: java.lang.Object
                                         Modifiers: public
                                         Parameter types: NONE
                                         Exceptions: NONE
                                 Methods -> 
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: finalize
                                         Modifiers: protected
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.Throwable
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: wait
                                         Modifiers: public final
                                         Parameter types: [long, int]
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.InterruptedException
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: wait
                                         Modifiers: public final
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.InterruptedException
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: wait
                                         Modifiers: public final native
                                         Parameter types: [long]
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.InterruptedException
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: equals
                                         Modifiers: public
                                         Parameter types: [java.lang.Object]
                                         Return type: boolean
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: toString
                                         Modifiers: public
                                         Parameter types: NONE
                                         Return type: java.lang.String
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: hashCode
                                         Modifiers: public native
                                         Parameter types: NONE
                                         Return type: int
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: getClass
                                         Modifiers: public final native
                                         Parameter types: NONE
                                         Return type: java.lang.Class
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: clone
                                         Modifiers: protected native
                                         Parameter types: NONE
                                         Return type: java.lang.Object
                                         Exceptions -> 
                                             java.lang.CloneNotSupportedException
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: notify
                                         Modifiers: public final native
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: notifyAll
                                         Modifiers: public final native
                                         Parameter types: NONE
@@ -671,20 +671,20 @@ Superclass ->
                                         Exceptions: NONE
                                 Fields: NONE 
                         Interfaces ->
-                            INTERFACE
+                            INTERFACE (ClassA)
                                 Name: java.io.Serializable
                                 Superclass: NONE
                                 Interfaces: NONE
                                 Constructors: NONE
                                 Methods: NONE
                                 Fields: NONE 
-                            INTERFACE
+                            INTERFACE (ClassA)
                                 Name: java.lang.Runnable
                                 Superclass: NONE
                                 Interfaces: NONE
                                 Constructors: NONE
                                 Methods -> 
-                                    METHOD
+                                    METHOD (java.lang.Runnable)
                                         Name: run
                                         Modifiers: public abstract
                                         Parameter types: NONE
@@ -692,65 +692,65 @@ Superclass ->
                                         Exceptions: NONE
                                 Fields: NONE 
                         Constructors -> 
-                            CONSTRUCTOR
+                            CONSTRUCTOR (ClassA)
                                 Name: ClassA
                                 Modifiers: public
                                 Parameter types: NONE
                                 Exceptions: NONE
-                            CONSTRUCTOR
+                            CONSTRUCTOR (ClassA)
                                 Name: ClassA
                                 Modifiers: public
                                 Parameter types: [int]
                                 Exceptions: NONE
                         Methods -> 
-                            METHOD
+                            METHOD (ClassA)
                                 Name: run
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (ClassA)
                                 Name: toString
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: java.lang.String
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (ClassA)
                                 Name: getVal
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: int
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (ClassA)
+                                Name: printSomething
+                                Modifiers: private
+                                Parameter types: NONE
+                                Return type: void
+                                Exceptions: NONE
+                            METHOD (ClassA)
                                 Name: setVal
                                 Modifiers: public
                                 Parameter types: [int]
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.Exception
-                            METHOD
-                                Name: printSomething
-                                Modifiers: private
-                                Parameter types: NONE
-                                Return type: void
-                                Exceptions: NONE
                         Fields -> 
-                            FIELD
+                            FIELD (ClassA)
                                 Name: val
                                 Type: int
                                 Modifiers: private
                                 Value: 2
-                            FIELD
+                            FIELD (ClassA)
                                 Name: val2
                                 Type: double
                                 Modifiers: private
                                 Value: 0.2
-                            FIELD
+                            FIELD (ClassA)
                                 Name: val3
                                 Type: boolean
                                 Modifiers: private
                                 Value: true
-            FIELD
+            FIELD (ClassC)
                 Name: val4
                 Type: ClassA
                 Modifiers: private
@@ -758,83 +758,83 @@ Superclass ->
                     CLASS
                         Name: ClassA
                         Superclass -> 
-                            SUPERCLASS
+                            SUPERCLASS (ClassA)
                                 Name: java.lang.Object
                                 Superclass: NONE
                                 Interfaces: NONE
                                 Constructors -> 
-                                    CONSTRUCTOR
+                                    CONSTRUCTOR (java.lang.Object)
                                         Name: java.lang.Object
                                         Modifiers: public
                                         Parameter types: NONE
                                         Exceptions: NONE
                                 Methods -> 
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: finalize
                                         Modifiers: protected
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.Throwable
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: wait
                                         Modifiers: public final
                                         Parameter types: [long, int]
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.InterruptedException
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: wait
                                         Modifiers: public final
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.InterruptedException
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: wait
                                         Modifiers: public final native
                                         Parameter types: [long]
                                         Return type: void
                                         Exceptions -> 
                                             java.lang.InterruptedException
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: equals
                                         Modifiers: public
                                         Parameter types: [java.lang.Object]
                                         Return type: boolean
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: toString
                                         Modifiers: public
                                         Parameter types: NONE
                                         Return type: java.lang.String
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: hashCode
                                         Modifiers: public native
                                         Parameter types: NONE
                                         Return type: int
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: getClass
                                         Modifiers: public final native
                                         Parameter types: NONE
                                         Return type: java.lang.Class
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: clone
                                         Modifiers: protected native
                                         Parameter types: NONE
                                         Return type: java.lang.Object
                                         Exceptions -> 
                                             java.lang.CloneNotSupportedException
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: notify
                                         Modifiers: public final native
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions: NONE
-                                    METHOD
+                                    METHOD (java.lang.Object)
                                         Name: notifyAll
                                         Modifiers: public final native
                                         Parameter types: NONE
@@ -842,20 +842,20 @@ Superclass ->
                                         Exceptions: NONE
                                 Fields: NONE 
                         Interfaces ->
-                            INTERFACE
+                            INTERFACE (ClassA)
                                 Name: java.io.Serializable
                                 Superclass: NONE
                                 Interfaces: NONE
                                 Constructors: NONE
                                 Methods: NONE
                                 Fields: NONE 
-                            INTERFACE
+                            INTERFACE (ClassA)
                                 Name: java.lang.Runnable
                                 Superclass: NONE
                                 Interfaces: NONE
                                 Constructors: NONE
                                 Methods -> 
-                                    METHOD
+                                    METHOD (java.lang.Runnable)
                                         Name: run
                                         Modifiers: public abstract
                                         Parameter types: NONE
@@ -863,72 +863,72 @@ Superclass ->
                                         Exceptions: NONE
                                 Fields: NONE 
                         Constructors -> 
-                            CONSTRUCTOR
+                            CONSTRUCTOR (ClassA)
                                 Name: ClassA
                                 Modifiers: public
                                 Parameter types: NONE
                                 Exceptions: NONE
-                            CONSTRUCTOR
+                            CONSTRUCTOR (ClassA)
                                 Name: ClassA
                                 Modifiers: public
                                 Parameter types: [int]
                                 Exceptions: NONE
                         Methods -> 
-                            METHOD
+                            METHOD (ClassA)
                                 Name: run
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (ClassA)
                                 Name: toString
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: java.lang.String
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (ClassA)
                                 Name: getVal
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: int
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (ClassA)
+                                Name: printSomething
+                                Modifiers: private
+                                Parameter types: NONE
+                                Return type: void
+                                Exceptions: NONE
+                            METHOD (ClassA)
                                 Name: setVal
                                 Modifiers: public
                                 Parameter types: [int]
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.Exception
-                            METHOD
-                                Name: printSomething
-                                Modifiers: private
-                                Parameter types: NONE
-                                Return type: void
-                                Exceptions: NONE
                         Fields -> 
-                            FIELD
+                            FIELD (ClassA)
                                 Name: val
                                 Type: int
                                 Modifiers: private
                                 Value: 3
-                            FIELD
+                            FIELD (ClassA)
                                 Name: val2
                                 Type: double
                                 Modifiers: private
                                 Value: 0.2
-                            FIELD
+                            FIELD (ClassA)
                                 Name: val3
                                 Type: boolean
                                 Modifiers: private
                                 Value: true
 Interfaces ->
-    INTERFACE
+    INTERFACE (ClassB)
         Name: java.lang.Runnable
         Superclass: NONE
         Interfaces: NONE
         Constructors: NONE
         Methods -> 
-            METHOD
+            METHOD (java.lang.Runnable)
                 Name: run
                 Modifiers: public abstract
                 Parameter types: NONE
@@ -936,33 +936,33 @@ Interfaces ->
                 Exceptions: NONE
         Fields: NONE 
 Constructors -> 
-    CONSTRUCTOR
+    CONSTRUCTOR (ClassB)
         Name: ClassB
         Modifiers: public
         Parameter types: NONE
         Exceptions -> 
             java.lang.Exception
 Methods -> 
-    METHOD
+    METHOD (ClassB)
         Name: run
         Modifiers: public
         Parameter types: NONE
         Return type: void
         Exceptions: NONE
-    METHOD
+    METHOD (ClassB)
         Name: toString
         Modifiers: public
         Parameter types: NONE
         Return type: java.lang.String
         Exceptions: NONE
-    METHOD
+    METHOD (ClassB)
         Name: func3
         Modifiers: public
         Parameter types: [int]
         Return type: void
         Exceptions: NONE
 Fields -> 
-    FIELD
+    FIELD (ClassB)
         Name: val
         Type: ClassA
         Modifiers: private
@@ -970,83 +970,83 @@ Fields ->
             CLASS
                 Name: ClassA
                 Superclass -> 
-                    SUPERCLASS
+                    SUPERCLASS (ClassA)
                         Name: java.lang.Object
                         Superclass: NONE
                         Interfaces: NONE
                         Constructors -> 
-                            CONSTRUCTOR
+                            CONSTRUCTOR (java.lang.Object)
                                 Name: java.lang.Object
                                 Modifiers: public
                                 Parameter types: NONE
                                 Exceptions: NONE
                         Methods -> 
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: finalize
                                 Modifiers: protected
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.Throwable
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: wait
                                 Modifiers: public final
                                 Parameter types: [long, int]
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.InterruptedException
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: wait
                                 Modifiers: public final
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.InterruptedException
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: wait
                                 Modifiers: public final native
                                 Parameter types: [long]
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.InterruptedException
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: equals
                                 Modifiers: public
                                 Parameter types: [java.lang.Object]
                                 Return type: boolean
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: toString
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: java.lang.String
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: hashCode
                                 Modifiers: public native
                                 Parameter types: NONE
                                 Return type: int
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: getClass
                                 Modifiers: public final native
                                 Parameter types: NONE
                                 Return type: java.lang.Class
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: clone
                                 Modifiers: protected native
                                 Parameter types: NONE
                                 Return type: java.lang.Object
                                 Exceptions -> 
                                     java.lang.CloneNotSupportedException
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: notify
                                 Modifiers: public final native
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: notifyAll
                                 Modifiers: public final native
                                 Parameter types: NONE
@@ -1054,20 +1054,20 @@ Fields ->
                                 Exceptions: NONE
                         Fields: NONE 
                 Interfaces ->
-                    INTERFACE
+                    INTERFACE (ClassA)
                         Name: java.io.Serializable
                         Superclass: NONE
                         Interfaces: NONE
                         Constructors: NONE
                         Methods: NONE
                         Fields: NONE 
-                    INTERFACE
+                    INTERFACE (ClassA)
                         Name: java.lang.Runnable
                         Superclass: NONE
                         Interfaces: NONE
                         Constructors: NONE
                         Methods -> 
-                            METHOD
+                            METHOD (java.lang.Runnable)
                                 Name: run
                                 Modifiers: public abstract
                                 Parameter types: NONE
@@ -1075,65 +1075,65 @@ Fields ->
                                 Exceptions: NONE
                         Fields: NONE 
                 Constructors -> 
-                    CONSTRUCTOR
+                    CONSTRUCTOR (ClassA)
                         Name: ClassA
                         Modifiers: public
                         Parameter types: NONE
                         Exceptions: NONE
-                    CONSTRUCTOR
+                    CONSTRUCTOR (ClassA)
                         Name: ClassA
                         Modifiers: public
                         Parameter types: [int]
                         Exceptions: NONE
                 Methods -> 
-                    METHOD
+                    METHOD (ClassA)
                         Name: run
                         Modifiers: public
                         Parameter types: NONE
                         Return type: void
                         Exceptions: NONE
-                    METHOD
+                    METHOD (ClassA)
                         Name: toString
                         Modifiers: public
                         Parameter types: NONE
                         Return type: java.lang.String
                         Exceptions: NONE
-                    METHOD
+                    METHOD (ClassA)
                         Name: getVal
                         Modifiers: public
                         Parameter types: NONE
                         Return type: int
                         Exceptions: NONE
-                    METHOD
+                    METHOD (ClassA)
+                        Name: printSomething
+                        Modifiers: private
+                        Parameter types: NONE
+                        Return type: void
+                        Exceptions: NONE
+                    METHOD (ClassA)
                         Name: setVal
                         Modifiers: public
                         Parameter types: [int]
                         Return type: void
                         Exceptions -> 
                             java.lang.Exception
-                    METHOD
-                        Name: printSomething
-                        Modifiers: private
-                        Parameter types: NONE
-                        Return type: void
-                        Exceptions: NONE
                 Fields -> 
-                    FIELD
+                    FIELD (ClassA)
                         Name: val
                         Type: int
                         Modifiers: private
                         Value: 3
-                    FIELD
+                    FIELD (ClassA)
                         Name: val2
                         Type: double
                         Modifiers: private
                         Value: 0.2
-                    FIELD
+                    FIELD (ClassA)
                         Name: val3
                         Type: boolean
                         Modifiers: private
                         Value: true
-    FIELD
+    FIELD (ClassB)
         Name: val2
         Type: ClassA
         Modifiers: private
@@ -1141,83 +1141,83 @@ Fields ->
             CLASS
                 Name: ClassA
                 Superclass -> 
-                    SUPERCLASS
+                    SUPERCLASS (ClassA)
                         Name: java.lang.Object
                         Superclass: NONE
                         Interfaces: NONE
                         Constructors -> 
-                            CONSTRUCTOR
+                            CONSTRUCTOR (java.lang.Object)
                                 Name: java.lang.Object
                                 Modifiers: public
                                 Parameter types: NONE
                                 Exceptions: NONE
                         Methods -> 
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: finalize
                                 Modifiers: protected
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.Throwable
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: wait
                                 Modifiers: public final
                                 Parameter types: [long, int]
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.InterruptedException
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: wait
                                 Modifiers: public final
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.InterruptedException
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: wait
                                 Modifiers: public final native
                                 Parameter types: [long]
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.InterruptedException
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: equals
                                 Modifiers: public
                                 Parameter types: [java.lang.Object]
                                 Return type: boolean
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: toString
                                 Modifiers: public
                                 Parameter types: NONE
                                 Return type: java.lang.String
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: hashCode
                                 Modifiers: public native
                                 Parameter types: NONE
                                 Return type: int
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: getClass
                                 Modifiers: public final native
                                 Parameter types: NONE
                                 Return type: java.lang.Class
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: clone
                                 Modifiers: protected native
                                 Parameter types: NONE
                                 Return type: java.lang.Object
                                 Exceptions -> 
                                     java.lang.CloneNotSupportedException
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: notify
                                 Modifiers: public final native
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                            METHOD
+                            METHOD (java.lang.Object)
                                 Name: notifyAll
                                 Modifiers: public final native
                                 Parameter types: NONE
@@ -1225,20 +1225,20 @@ Fields ->
                                 Exceptions: NONE
                         Fields: NONE 
                 Interfaces ->
-                    INTERFACE
+                    INTERFACE (ClassA)
                         Name: java.io.Serializable
                         Superclass: NONE
                         Interfaces: NONE
                         Constructors: NONE
                         Methods: NONE
                         Fields: NONE 
-                    INTERFACE
+                    INTERFACE (ClassA)
                         Name: java.lang.Runnable
                         Superclass: NONE
                         Interfaces: NONE
                         Constructors: NONE
                         Methods -> 
-                            METHOD
+                            METHOD (java.lang.Runnable)
                                 Name: run
                                 Modifiers: public abstract
                                 Parameter types: NONE
@@ -1246,65 +1246,65 @@ Fields ->
                                 Exceptions: NONE
                         Fields: NONE 
                 Constructors -> 
-                    CONSTRUCTOR
+                    CONSTRUCTOR (ClassA)
                         Name: ClassA
                         Modifiers: public
                         Parameter types: NONE
                         Exceptions: NONE
-                    CONSTRUCTOR
+                    CONSTRUCTOR (ClassA)
                         Name: ClassA
                         Modifiers: public
                         Parameter types: [int]
                         Exceptions: NONE
                 Methods -> 
-                    METHOD
+                    METHOD (ClassA)
                         Name: run
                         Modifiers: public
                         Parameter types: NONE
                         Return type: void
                         Exceptions: NONE
-                    METHOD
+                    METHOD (ClassA)
                         Name: toString
                         Modifiers: public
                         Parameter types: NONE
                         Return type: java.lang.String
                         Exceptions: NONE
-                    METHOD
+                    METHOD (ClassA)
                         Name: getVal
                         Modifiers: public
                         Parameter types: NONE
                         Return type: int
                         Exceptions: NONE
-                    METHOD
+                    METHOD (ClassA)
+                        Name: printSomething
+                        Modifiers: private
+                        Parameter types: NONE
+                        Return type: void
+                        Exceptions: NONE
+                    METHOD (ClassA)
                         Name: setVal
                         Modifiers: public
                         Parameter types: [int]
                         Return type: void
                         Exceptions -> 
                             java.lang.Exception
-                    METHOD
-                        Name: printSomething
-                        Modifiers: private
-                        Parameter types: NONE
-                        Return type: void
-                        Exceptions: NONE
                 Fields -> 
-                    FIELD
+                    FIELD (ClassA)
                         Name: val
                         Type: int
                         Modifiers: private
                         Value: 12
-                    FIELD
+                    FIELD (ClassA)
                         Name: val2
                         Type: double
                         Modifiers: private
                         Value: 0.2
-                    FIELD
+                    FIELD (ClassA)
                         Name: val3
                         Type: boolean
                         Modifiers: private
                         Value: true
-    FIELD
+    FIELD (ClassB)
         Name: val3
         Type: ClassA
         Modifiers: private

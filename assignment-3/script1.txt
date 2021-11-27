@@ -4,83 +4,83 @@ Running Test: ClassA
 Recursive: true
 Name: ClassA
 Superclass -> 
-    SUPERCLASS
+    SUPERCLASS (ClassA)
         Name: java.lang.Object
         Superclass: NONE
         Interfaces: NONE
         Constructors -> 
-            CONSTRUCTOR
+            CONSTRUCTOR (java.lang.Object)
                 Name: java.lang.Object
                 Modifiers: public
                 Parameter types: NONE
                 Exceptions: NONE
         Methods -> 
-            METHOD
+            METHOD (java.lang.Object)
                 Name: finalize
                 Modifiers: protected
                 Parameter types: NONE
                 Return type: void
                 Exceptions -> 
                     java.lang.Throwable
-            METHOD
+            METHOD (java.lang.Object)
                 Name: wait
                 Modifiers: public final
                 Parameter types: [long, int]
                 Return type: void
                 Exceptions -> 
                     java.lang.InterruptedException
-            METHOD
+            METHOD (java.lang.Object)
                 Name: wait
                 Modifiers: public final
                 Parameter types: NONE
                 Return type: void
                 Exceptions -> 
                     java.lang.InterruptedException
-            METHOD
+            METHOD (java.lang.Object)
                 Name: wait
                 Modifiers: public final native
                 Parameter types: [long]
                 Return type: void
                 Exceptions -> 
                     java.lang.InterruptedException
-            METHOD
+            METHOD (java.lang.Object)
                 Name: equals
                 Modifiers: public
                 Parameter types: [java.lang.Object]
                 Return type: boolean
                 Exceptions: NONE
-            METHOD
+            METHOD (java.lang.Object)
                 Name: toString
                 Modifiers: public
                 Parameter types: NONE
                 Return type: java.lang.String
                 Exceptions: NONE
-            METHOD
+            METHOD (java.lang.Object)
                 Name: hashCode
                 Modifiers: public native
                 Parameter types: NONE
                 Return type: int
                 Exceptions: NONE
-            METHOD
+            METHOD (java.lang.Object)
                 Name: getClass
                 Modifiers: public final native
                 Parameter types: NONE
                 Return type: java.lang.Class
                 Exceptions: NONE
-            METHOD
+            METHOD (java.lang.Object)
                 Name: clone
                 Modifiers: protected native
                 Parameter types: NONE
                 Return type: java.lang.Object
                 Exceptions -> 
                     java.lang.CloneNotSupportedException
-            METHOD
+            METHOD (java.lang.Object)
                 Name: notify
                 Modifiers: public final native
                 Parameter types: NONE
                 Return type: void
                 Exceptions: NONE
-            METHOD
+            METHOD (java.lang.Object)
                 Name: notifyAll
                 Modifiers: public final native
                 Parameter types: NONE
@@ -88,20 +88,20 @@ Superclass ->
                 Exceptions: NONE
         Fields: NONE 
 Interfaces ->
-    INTERFACE
+    INTERFACE (ClassA)
         Name: java.io.Serializable
         Superclass: NONE
         Interfaces: NONE
         Constructors: NONE
         Methods: NONE
         Fields: NONE 
-    INTERFACE
+    INTERFACE (ClassA)
         Name: java.lang.Runnable
         Superclass: NONE
         Interfaces: NONE
         Constructors: NONE
         Methods -> 
-            METHOD
+            METHOD (java.lang.Runnable)
                 Name: run
                 Modifiers: public abstract
                 Parameter types: NONE
@@ -109,60 +109,60 @@ Interfaces ->
                 Exceptions: NONE
         Fields: NONE 
 Constructors -> 
-    CONSTRUCTOR
+    CONSTRUCTOR (ClassA)
         Name: ClassA
         Modifiers: public
         Parameter types: NONE
         Exceptions: NONE
-    CONSTRUCTOR
+    CONSTRUCTOR (ClassA)
         Name: ClassA
         Modifiers: public
         Parameter types: [int]
         Exceptions: NONE
 Methods -> 
-    METHOD
+    METHOD (ClassA)
         Name: run
         Modifiers: public
         Parameter types: NONE
         Return type: void
         Exceptions: NONE
-    METHOD
+    METHOD (ClassA)
         Name: toString
         Modifiers: public
         Parameter types: NONE
         Return type: java.lang.String
         Exceptions: NONE
-    METHOD
+    METHOD (ClassA)
         Name: getVal
         Modifiers: public
         Parameter types: NONE
         Return type: int
         Exceptions: NONE
-    METHOD
+    METHOD (ClassA)
+        Name: printSomething
+        Modifiers: private
+        Parameter types: NONE
+        Return type: void
+        Exceptions: NONE
+    METHOD (ClassA)
         Name: setVal
         Modifiers: public
         Parameter types: [int]
         Return type: void
         Exceptions -> 
             java.lang.Exception
-    METHOD
-        Name: printSomething
-        Modifiers: private
-        Parameter types: NONE
-        Return type: void
-        Exceptions: NONE
 Fields -> 
-    FIELD
+    FIELD (ClassA)
         Name: val
         Type: int
         Modifiers: private
         Value: 3
-    FIELD
+    FIELD (ClassA)
         Name: val2
         Type: double
         Modifiers: private
         Value: 0.2
-    FIELD
+    FIELD (ClassA)
         Name: val3
         Type: boolean
         Modifiers: private
