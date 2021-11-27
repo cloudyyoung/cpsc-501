@@ -128,7 +128,7 @@ public class Inspector {
             this.print("Value: null", depth);
         } else {
             Class c = obj.getClass();
-            if (this.isWrapperType(c)) {
+            if (c.isPrimitive() || this.isWrapperType(c)) {
                 this.print("Value: " + obj, depth);
             } else {
                 this.print("Value (ref): " + this.getObjectHashSignature(obj), depth);
