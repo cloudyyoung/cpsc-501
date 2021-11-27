@@ -132,7 +132,8 @@ public class Inspector {
                 this.print("Value: " + obj, depth);
             } else {
                 this.print("Value (ref): " + c.getName() + '@' + Integer.toHexString(obj.hashCode()), depth);
-                this.inspectClass(c, obj, recursive, depth);
+                this.print("CLASS", depth + 1);
+                this.inspectClass(c, obj, recursive, depth + 2);
             }
         }
     }
