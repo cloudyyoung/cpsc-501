@@ -40,7 +40,7 @@ public class Inspector {
     private void inspectSuperClass(Class c, Object obj, boolean recursive, int depth) {
         if (c != null && c.getSuperclass() != null) {
             this.print("Superclass -> ", depth);
-            this.print("SUPERCLASS", depth + 1);
+            this.print("SUPERCLASS (" + c.getName() + ")", depth + 1);
             this.inspectClass(c.getSuperclass(), obj, recursive, depth + 2);
         } else {
             this.print("Superclass: NONE", depth);
@@ -52,7 +52,7 @@ public class Inspector {
         if (interfaces != null && interfaces.length != 0) {
             this.print("Interfaces ->", depth);
             for (Class i : interfaces) {
-                this.print("INTERFACE", depth + 1);
+                this.print("INTERFACE (" + c.getName() + ")", depth + 1);
                 this.inspectClass(i, obj, recursive, depth + 2);
             }
         } else {
@@ -65,7 +65,7 @@ public class Inspector {
         if (constructors != null && constructors.length != 0) {
             this.print("Constructors -> ", depth);
             for (Constructor constructor : constructors) {
-                this.print("CONSTRUCTOR", depth + 1);
+                this.print("CONSTRUCTOR (" + c.getName() + ")", depth + 1);
                 this.inspectExecutable(constructor, obj, recursive, depth + 2);
             }
         } else {
@@ -78,7 +78,7 @@ public class Inspector {
         if (methods != null && methods.length != 0) {
             this.print("Methods -> ", depth);
             for (Method method : methods) {
-                this.print("METHOD", depth + 1);
+                this.print("METHOD (" + c.getName() + ")", depth + 1);
                 this.inspectExecutable(method, obj, recursive, depth + 2);
             }
         } else {
@@ -91,7 +91,7 @@ public class Inspector {
         if (fields != null && fields.length != 0) {
             this.print("Fields -> ", depth);
             for (Field field : fields) {
-                this.print("FIELD", depth + 1);
+                this.print("FIELD (" + c.getName() + ")", depth + 1);
                 this.inspectField(field, obj, recursive, depth + 2);
             }
         } else {
@@ -131,7 +131,7 @@ public class Inspector {
             if (this.isWrapperType(c)) {
                 this.print("Value: " + obj, depth);
             } else {
-                this.print("Value (ref): " + c.getName() + '@' + Integer.toHexString(obj.hashCode()), depth);
+                this.print("Value (ref): " + this.getObjectHashSignature(obj), depth);
                 this.print("CLASS", depth + 1);
                 this.inspectClass(c, obj, recursive, depth + 2);
             }
@@ -149,7 +149,7 @@ public class Inspector {
                 this.print("Value: " + object, depth + 1);
 
                 if (object != null && recursive && object.getClass() != null) {
-                    this.print("CLASS", depth + 2);
+                    this.print("CLASS (" + this.getObjectHashSignature(object) + ")", depth + 2);
                     this.inspectClass(object.getClass(), array, recursive, depth + 3);
                 }
             }
@@ -198,6 +198,11 @@ public class Inspector {
         }
     }
 
+    private String getObjectHashSignature(Object obj){
+        return "" + obj.getClass().getName() + '@' + Integer.toHexString(obj.hashCode());
+    }
+
+    // https://stackoverflow.com/questions/709961/determining-if-an-object-is-of-primitive-type
     private boolean isWrapperType(Class<?> clazz) {
         return clazz.equals(Boolean.class) || clazz.equals(Integer.class) || clazz.equals(Character.class)
                 || clazz.equals(Byte.class) || clazz.equals(Short.class) || clazz.equals(Double.class)
