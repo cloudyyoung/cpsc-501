@@ -92,23 +92,34 @@ public class Inspector {
 			this.print("Fields -> ", depth);
 			for (Field field : fields) {
 				this.print("FIELD (" + c.getName() + ")", depth + 1);
-				this.inspectField(field, obj, recursive, depth + 2);
+				this.inspectField(c, field, obj, recursive, depth + 2);
 			}
 		} else {
 			this.print("Fields: NONE ", depth);
 		}
 	}
 
-	private void inspectField(Field field, Object obj, boolean recursive, int depth) {
+	private void inspectField(Class c, Field field, Object obj, boolean recursive, int depth) {
 		Class fieldType = field.getType();
+		// obj = c.cast(obj);
 		boolean isArray = fieldType.isArray();
-		Object value = null;
+		Object value;
 
 		try {
 			field.setAccessible(true);
 			value = field.get(obj);
+		} catch (IllegalArgumentException e) {
+			this.print("ERROR: " + e.getMessage(), depth);
+			this.print("Field: " + field, depth);
+			this.print("Object: " + obj, depth);
+			this.print("Exception: " + e, depth);
+			this.print("is instance: " + fieldType.isInstance(obj), depth);
+			return;
 		} catch (Exception e) {
-			this.print("ERROR", depth + 1);
+			this.print("ERROR: " + e.getMessage(), depth);
+			this.print("Field: " + field, depth);
+			this.print("Object: " + obj, depth);
+			this.print("Exception: " + e, depth);
 			return;
 		}
 
@@ -119,15 +130,14 @@ public class Inspector {
 		if (isArray) {
 			this.inspectArrayValues(value, false, depth);
 		} else {
-			this.inspectObjectValue(value, recursive, depth);
+			this.inspectObjectValue(fieldType, value, recursive, depth);
 		}
 	}
 
-	private void inspectObjectValue(Object obj, boolean recursive, int depth) {
+	private void inspectObjectValue(Class c, Object obj, boolean recursive, int depth) {
 		if (obj == null) {
 			this.print("Value: null", depth);
 		} else {
-			Class c = obj.getClass();
 			if (c.isPrimitive() || this.isWrapperType(c)) {
 				this.print("Value: " + obj, depth);
 			} else {
