@@ -25,7 +25,7 @@ public class Inspector {
     }
 
     private void inspectClass(Class c, Object obj, boolean recursive, int depth) {
-        if(c != null){
+        if (c != null) {
             // note: depth will be needed to capture the output indentation level
             this.print("Name: " + c.getName(), depth);
 
@@ -119,12 +119,22 @@ public class Inspector {
         if (isArray) {
             this.inspectArrayValues(value, false, depth);
         } else {
-            this.inspectPrimitiveValue(value, depth);
+            this.inspectObjectValue(value, recursive, depth);
         }
     }
 
-    private void inspectPrimitiveValue(Object value, int depth) {
-        this.print("Value: " + value, depth);
+    private void inspectObjectValue(Object obj, boolean recursive, int depth) {
+        if (obj == null) {
+            this.print("Value: null", depth);
+        } else {
+            Class c = obj.getClass();
+            if (this.isWrapperType(c)) {
+                this.print("Value: " + obj, depth);
+            } else {
+                this.print("Value: " + c.getName(), depth);
+                this.inspectClass(c, obj, recursive, depth);
+            }
+        }
     }
 
     private void inspectArrayValues(Object array, boolean recursive, int depth) {
@@ -166,7 +176,7 @@ public class Inspector {
             for (int t = 0; t < params.length; t++) {
                 params_names[t] = params[t].getName();
             }
-            this.print("Parameter types: " + String.join(", ", params_names), depth);
+            this.print("Parameter types: [" + String.join(", ", params_names) + "]", depth);
         } else {
             this.print("Parameter types: NONE", depth);
         }
@@ -181,10 +191,15 @@ public class Inspector {
             this.print("Exceptions -> ", depth);
             for (Class exception : exceptions) {
                 this.print(exception.getName(), depth + 1);
-                break;
             }
         } else {
             this.print("Exceptions: NONE", depth);
         }
+    }
+
+    private boolean isWrapperType(Class<?> clazz) {
+        return clazz.equals(Boolean.class) || clazz.equals(Integer.class) || clazz.equals(Character.class)
+                || clazz.equals(Byte.class) || clazz.equals(Short.class) || clazz.equals(Double.class)
+                || clazz.equals(Long.class) || clazz.equals(Float.class);
     }
 }
