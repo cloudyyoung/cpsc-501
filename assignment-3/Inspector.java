@@ -151,15 +151,15 @@ public class Inspector {
 			for (int t = 0; t < Array.getLength(array); t++) {
 				Object object = Array.get(array, t);
 
-				if (!componentType.isPrimitive() && object != null && object.getClass() != null) { // Not primitive type
+				if(componentType.isPrimitive() || this.isWrapperType(componentType) || object == null) {
+					this.print("Value: " + object, depth + 1);
+				} else {
 					this.print("Value (ref): " + this.getObjectHashSignature(object), depth + 1);
 
 					if (recursive) {
 						this.print("CLASS (" + this.getObjectHashSignature(object) + ")", depth + 2);
 						this.inspectClass(object.getClass(), object, recursive, depth + 3);
 					}
-				} else { // Primitive type
-					this.print("Value: " + object, depth + 1);
 				}
 			}
 		}
