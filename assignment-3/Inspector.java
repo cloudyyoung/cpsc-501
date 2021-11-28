@@ -141,6 +141,8 @@ public class Inspector {
 	}
 
 	private void inspectArrayValues(Object array, boolean recursive, int depth) {
+		Class c = array.getClass();
+		this.print("Component type: " + c.getComponentType(), depth);
 		this.print("Length: " + Array.getLength(array), depth);
 		this.print("Entries ->", depth);
 
@@ -166,7 +168,6 @@ public class Inspector {
 		Class c = array.getClass();
 		this.print("Name: " + c.getName(), depth);
 		this.print("Type name: " + c.getTypeName(), depth);
-		this.print("Component type: " + c.getComponentType(), depth);
 		this.print("Modifiers: " + Modifier.toString(c.getModifiers()), depth);
 		this.inspectArrayValues(array, recursive, depth);
 	}
