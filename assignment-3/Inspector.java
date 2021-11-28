@@ -101,7 +101,6 @@ public class Inspector {
 
 	private void inspectField(Class c, Field field, Object obj, boolean recursive, int depth) {
 		Class fieldType = field.getType();
-		// obj = c.cast(obj);
 		boolean isArray = fieldType.isArray();
 		Object value;
 
@@ -113,7 +112,7 @@ public class Inspector {
 			this.print("Field: " + field, depth);
 			this.print("Object: " + obj, depth);
 			this.print("Exception: " + e, depth);
-			this.print("is instance: " + fieldType.isInstance(obj), depth);
+			this.print("is instance: " + c.isInstance(obj), depth);
 			return;
 		} catch (Exception e) {
 			this.print("ERROR: " + e.getMessage(), depth);
@@ -155,14 +154,16 @@ public class Inspector {
 		if (array != null) {
 			for (int t = 0; t < Array.getLength(array); t++) {
 				Object object = Array.get(array, t);
-				boolean isInspectable = object != null && recursive && object.getClass() != null;
 
-				if (!isInspectable) {
-					this.print("Value: " + object, depth + 1);
-				} else {
+				if (object != null && object.getClass() != null) { // Not primitive type
 					this.print("Value (ref): " + this.getObjectHashSignature(object), depth + 1);
-					this.print("CLASS (" + this.getObjectHashSignature(object) + ")", depth + 2);
-					this.inspectClass(object.getClass(), array, recursive, depth + 3);
+
+					if (recursive) {
+						this.print("CLASS (" + this.getObjectHashSignature(object) + ")", depth + 2);
+						this.inspectClass(object.getClass(), object, recursive, depth + 3);
+					}
+				} else { // Primitive type
+					this.print("Value: " + object, depth + 1);
 				}
 			}
 		}
