@@ -107,13 +107,6 @@ public class Inspector {
 		try {
 			field.setAccessible(true);
 			value = field.get(obj);
-		} catch (IllegalArgumentException e) {
-			this.print("ERROR: " + e.getMessage(), depth);
-			this.print("Field: " + field, depth);
-			this.print("Object: " + obj, depth);
-			this.print("Exception: " + e, depth);
-			this.print("is instance: " + c.isInstance(obj), depth);
-			return;
 		} catch (Exception e) {
 			this.print("ERROR: " + e.getMessage(), depth);
 			this.print("Field: " + field, depth);
