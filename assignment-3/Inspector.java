@@ -127,16 +127,12 @@ public class Inspector {
 	}
 
 	private void inspectObjectValue(Class c, Object obj, boolean recursive, int depth) {
-		if (obj == null) {
-			this.print("Value: null", depth);
+		if (c.isPrimitive() || this.isWrapperType(c) || obj == null) {
+			this.print("Value: " + obj, depth);
 		} else {
-			if (c.isPrimitive() || this.isWrapperType(c)) {
-				this.print("Value: " + obj, depth);
-			} else {
-				this.print("Value (ref): " + this.getObjectHashSignature(obj), depth);
-				this.print("CLASS", depth + 1);
-				this.inspectClass(c, obj, recursive, depth + 2);
-			}
+			this.print("Value (ref): " + this.getObjectHashSignature(obj), depth);
+			this.print("CLASS", depth + 1);
+			this.inspectClass(c, obj, recursive, depth + 2);
 		}
 	}
 
