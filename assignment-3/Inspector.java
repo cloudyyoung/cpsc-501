@@ -142,7 +142,8 @@ public class Inspector {
 
 	private void inspectArrayValues(Object array, boolean recursive, int depth) {
 		Class c = array.getClass();
-		this.print("Component type: " + c.getComponentType(), depth);
+		Class componentType = c.getComponentType();
+		this.print("Component type: " + componentType, depth);
 		this.print("Length: " + Array.getLength(array), depth);
 		this.print("Entries ->", depth);
 
@@ -150,7 +151,7 @@ public class Inspector {
 			for (int t = 0; t < Array.getLength(array); t++) {
 				Object object = Array.get(array, t);
 
-				if (object != null && object.getClass() != null) { // Not primitive type
+				if (!componentType.isPrimitive() && object != null && object.getClass() != null) { // Not primitive type
 					this.print("Value (ref): " + this.getObjectHashSignature(object), depth + 1);
 
 					if (recursive) {
