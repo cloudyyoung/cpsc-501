@@ -918,6 +918,7 @@ Fields ->
         Name: value
         Type: [B
         Modifiers: private final
+        Component type: byte
         Length: 11
         Entries ->
             Value: 84
@@ -960,290 +961,171 @@ Fields ->
         Name: serialPersistentFields
         Type: [Ljava.io.ObjectStreamField;
         Modifiers: private static final
+        Component type: class java.io.ObjectStreamField
         Length: 0
         Entries ->
     FIELD (java.lang.String)
         Name: CASE_INSENSITIVE_ORDER
         Type: java.util.Comparator
         Modifiers: public static final
-        Value (ref): java.lang.String$CaseInsensitiveComparator@7699a589
+        Value (ref): java.lang.String$CaseInsensitiveComparator@5fd0d5ae
             CLASS
-                Name: java.lang.String$CaseInsensitiveComparator
-                Superclass -> 
-                    SUPERCLASS (java.lang.String$CaseInsensitiveComparator)
-                        Name: java.lang.Object
-                        Superclass: NONE
-                        Interfaces: NONE
-                        Constructors -> 
-                            CONSTRUCTOR (java.lang.Object)
-                                Name: java.lang.Object
-                                Modifiers: public
-                                Parameter types: NONE
-                                Exceptions: NONE
-                        Methods -> 
-                            METHOD (java.lang.Object)
-                                Name: finalize
-                                Modifiers: protected
-                                Parameter types: NONE
-                                Return type: void
-                                Exceptions -> 
-                                    java.lang.Throwable
-                            METHOD (java.lang.Object)
-                                Name: wait
-                                Modifiers: public final
-                                Parameter types: [long, int]
-                                Return type: void
-                                Exceptions -> 
-                                    java.lang.InterruptedException
-                            METHOD (java.lang.Object)
-                                Name: wait
-                                Modifiers: public final
-                                Parameter types: NONE
-                                Return type: void
-                                Exceptions -> 
-                                    java.lang.InterruptedException
-                            METHOD (java.lang.Object)
-                                Name: wait
-                                Modifiers: public final native
-                                Parameter types: [long]
-                                Return type: void
-                                Exceptions -> 
-                                    java.lang.InterruptedException
-                            METHOD (java.lang.Object)
-                                Name: equals
-                                Modifiers: public
-                                Parameter types: [java.lang.Object]
-                                Return type: boolean
-                                Exceptions: NONE
-                            METHOD (java.lang.Object)
-                                Name: toString
-                                Modifiers: public
-                                Parameter types: NONE
-                                Return type: java.lang.String
-                                Exceptions: NONE
-                            METHOD (java.lang.Object)
-                                Name: hashCode
-                                Modifiers: public native
-                                Parameter types: NONE
-                                Return type: int
-                                Exceptions: NONE
-                            METHOD (java.lang.Object)
-                                Name: getClass
-                                Modifiers: public final native
-                                Parameter types: NONE
-                                Return type: java.lang.Class
-                                Exceptions: NONE
-                            METHOD (java.lang.Object)
-                                Name: clone
-                                Modifiers: protected native
-                                Parameter types: NONE
-                                Return type: java.lang.Object
-                                Exceptions -> 
-                                    java.lang.CloneNotSupportedException
-                            METHOD (java.lang.Object)
-                                Name: notify
-                                Modifiers: public final native
-                                Parameter types: NONE
-                                Return type: void
-                                Exceptions: NONE
-                            METHOD (java.lang.Object)
-                                Name: notifyAll
-                                Modifiers: public final native
-                                Parameter types: NONE
-                                Return type: void
-                                Exceptions: NONE
-                        Fields: NONE 
-                Interfaces ->
-                    INTERFACE (java.lang.String$CaseInsensitiveComparator)
-                        Name: java.util.Comparator
-                        Superclass: NONE
-                        Interfaces: NONE
-                        Constructors: NONE
-                        Methods -> 
-                            METHOD (java.util.Comparator)
-                                Name: equals
-                                Modifiers: public abstract
-                                Parameter types: [java.lang.Object]
-                                Return type: boolean
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: compare
-                                Modifiers: public abstract
-                                Parameter types: [java.lang.Object, java.lang.Object]
-                                Return type: int
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: reverseOrder
-                                Modifiers: public static
-                                Parameter types: NONE
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: comparing
-                                Modifiers: public static
-                                Parameter types: [java.util.function.Function]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: comparing
-                                Modifiers: public static
-                                Parameter types: [java.util.function.Function, java.util.Comparator]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: thenComparing
-                                Modifiers: public
-                                Parameter types: [java.util.Comparator]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: thenComparing
-                                Modifiers: public
-                                Parameter types: [java.util.function.Function, java.util.Comparator]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: thenComparing
-                                Modifiers: public
-                                Parameter types: [java.util.function.Function]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: comparingInt
-                                Modifiers: public static
-                                Parameter types: [java.util.function.ToIntFunction]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: comparingLong
-                                Modifiers: public static
-                                Parameter types: [java.util.function.ToLongFunction]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: comparingDouble
-                                Modifiers: public static
-                                Parameter types: [java.util.function.ToDoubleFunction]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: lambda$comparingLong$6043328a$1
-                                Modifiers: private static
-                                Parameter types: [java.util.function.ToLongFunction, java.lang.Object, java.lang.Object]
-                                Return type: int
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: lambda$comparing$ea9a8b3a$1
-                                Modifiers: private static
-                                Parameter types: [java.util.Comparator, java.util.function.Function, java.lang.Object, java.lang.Object]
-                                Return type: int
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: lambda$comparing$77a9974f$1
-                                Modifiers: private static
-                                Parameter types: [java.util.function.Function, java.lang.Object, java.lang.Object]
-                                Return type: int
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: lambda$comparingDouble$8dcf42ea$1
-                                Modifiers: private static
-                                Parameter types: [java.util.function.ToDoubleFunction, java.lang.Object, java.lang.Object]
-                                Return type: int
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: lambda$thenComparing$36697e65$1
-                                Modifiers: private
-                                Parameter types: [java.util.Comparator, java.lang.Object, java.lang.Object]
-                                Return type: int
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: lambda$comparingInt$7b0bb60$1
-                                Modifiers: private static
-                                Parameter types: [java.util.function.ToIntFunction, java.lang.Object, java.lang.Object]
-                                Return type: int
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: reversed
-                                Modifiers: public
-                                Parameter types: NONE
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: thenComparingInt
-                                Modifiers: public
-                                Parameter types: [java.util.function.ToIntFunction]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: thenComparingLong
-                                Modifiers: public
-                                Parameter types: [java.util.function.ToLongFunction]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: thenComparingDouble
-                                Modifiers: public
-                                Parameter types: [java.util.function.ToDoubleFunction]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: naturalOrder
-                                Modifiers: public static
-                                Parameter types: NONE
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: nullsFirst
-                                Modifiers: public static
-                                Parameter types: [java.util.Comparator]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: nullsLast
-                                Modifiers: public static
-                                Parameter types: [java.util.Comparator]
-                                Return type: java.util.Comparator
-                                Exceptions: NONE
-                            METHOD (java.util.Comparator)
-                                Name: $deserializeLambda$
-                                Modifiers: private static
-                                Parameter types: [java.lang.invoke.SerializedLambda]
-                                Return type: java.lang.Object
-                                Exceptions: NONE
-                        Fields: NONE 
-                    INTERFACE (java.lang.String$CaseInsensitiveComparator)
-                        Name: java.io.Serializable
-                        Superclass: NONE
-                        Interfaces: NONE
-                        Constructors: NONE
-                        Methods: NONE
-                        Fields: NONE 
+                Name: java.util.Comparator
+                Superclass: NONE
+                Interfaces: NONE
                 Constructors: NONE
                 Methods -> 
-                    METHOD (java.lang.String$CaseInsensitiveComparator)
+                    METHOD (java.util.Comparator)
+                        Name: equals
+                        Modifiers: public abstract
+                        Parameter types: [java.lang.Object]
+                        Return type: boolean
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
                         Name: compare
-                        Modifiers: public volatile
+                        Modifiers: public abstract
                         Parameter types: [java.lang.Object, java.lang.Object]
                         Return type: int
                         Exceptions: NONE
-                    METHOD (java.lang.String$CaseInsensitiveComparator)
-                        Name: compare
+                    METHOD (java.util.Comparator)
+                        Name: reverseOrder
+                        Modifiers: public static
+                        Parameter types: NONE
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: comparing
+                        Modifiers: public static
+                        Parameter types: [java.util.function.Function]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: comparing
+                        Modifiers: public static
+                        Parameter types: [java.util.function.Function, java.util.Comparator]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: thenComparing
                         Modifiers: public
-                        Parameter types: [java.lang.String, java.lang.String]
+                        Parameter types: [java.util.Comparator]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: thenComparing
+                        Modifiers: public
+                        Parameter types: [java.util.function.Function, java.util.Comparator]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: thenComparing
+                        Modifiers: public
+                        Parameter types: [java.util.function.Function]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: comparingInt
+                        Modifiers: public static
+                        Parameter types: [java.util.function.ToIntFunction]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: comparingLong
+                        Modifiers: public static
+                        Parameter types: [java.util.function.ToLongFunction]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: comparingDouble
+                        Modifiers: public static
+                        Parameter types: [java.util.function.ToDoubleFunction]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: lambda$comparingLong$6043328a$1
+                        Modifiers: private static
+                        Parameter types: [java.util.function.ToLongFunction, java.lang.Object, java.lang.Object]
                         Return type: int
                         Exceptions: NONE
-                    METHOD (java.lang.String$CaseInsensitiveComparator)
-                        Name: readResolve
+                    METHOD (java.util.Comparator)
+                        Name: lambda$comparing$ea9a8b3a$1
+                        Modifiers: private static
+                        Parameter types: [java.util.Comparator, java.util.function.Function, java.lang.Object, java.lang.Object]
+                        Return type: int
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: lambda$comparing$77a9974f$1
+                        Modifiers: private static
+                        Parameter types: [java.util.function.Function, java.lang.Object, java.lang.Object]
+                        Return type: int
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: lambda$comparingDouble$8dcf42ea$1
+                        Modifiers: private static
+                        Parameter types: [java.util.function.ToDoubleFunction, java.lang.Object, java.lang.Object]
+                        Return type: int
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: lambda$thenComparing$36697e65$1
                         Modifiers: private
+                        Parameter types: [java.util.Comparator, java.lang.Object, java.lang.Object]
+                        Return type: int
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: lambda$comparingInt$7b0bb60$1
+                        Modifiers: private static
+                        Parameter types: [java.util.function.ToIntFunction, java.lang.Object, java.lang.Object]
+                        Return type: int
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: reversed
+                        Modifiers: public
                         Parameter types: NONE
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: thenComparingInt
+                        Modifiers: public
+                        Parameter types: [java.util.function.ToIntFunction]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: thenComparingLong
+                        Modifiers: public
+                        Parameter types: [java.util.function.ToLongFunction]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: thenComparingDouble
+                        Modifiers: public
+                        Parameter types: [java.util.function.ToDoubleFunction]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: naturalOrder
+                        Modifiers: public static
+                        Parameter types: NONE
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: nullsFirst
+                        Modifiers: public static
+                        Parameter types: [java.util.Comparator]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: nullsLast
+                        Modifiers: public static
+                        Parameter types: [java.util.Comparator]
+                        Return type: java.util.Comparator
+                        Exceptions: NONE
+                    METHOD (java.util.Comparator)
+                        Name: $deserializeLambda$
+                        Modifiers: private static
+                        Parameter types: [java.lang.invoke.SerializedLambda]
                         Return type: java.lang.Object
                         Exceptions: NONE
-                Fields -> 
-                    FIELD (java.lang.String$CaseInsensitiveComparator)
-                        Name: serialVersionUID
-                        Type: long
-                        Modifiers: private static final
-                        Value: 8575799808933029326
+                Fields: NONE 
     FIELD (java.lang.String)
         Name: LATIN1
         Type: byte
