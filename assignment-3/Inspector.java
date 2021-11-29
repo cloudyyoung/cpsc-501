@@ -264,12 +264,14 @@ public class Inspector {
 	/**
 	 * Inspects an executable
 	 * 
+	 * Executable is a method or a constructor
+	 * 
 	 * @param executable the executable to inspect
 	 * @param obj        the object to inspect
 	 * @param recursive  if recursively inspect
 	 * @param depth      the indentation depth
+	 * @link https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html
 	 */
-	// https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html
 	private void inspectExecutable(Executable executable, Object obj, boolean recursive, int depth) {
 		this.print("Name: " + executable.getName(), depth);
 		this.print("Modifiers: " + Modifier.toString(executable.getModifiers()), depth);
@@ -318,8 +320,8 @@ public class Inspector {
 	 * @param clazz the class to check
 	 * @return if true, the class is a wrapper class of a primitive type; else, it
 	 *         is not
+	 * @link https://stackoverflow.com/questions/709961/determining-if-an-object-is-of-primitive-type
 	 */
-	// https://stackoverflow.com/questions/709961/determining-if-an-object-is-of-primitive-type
 	private boolean isWrapperType(Class<?> clazz) {
 		return clazz.equals(Boolean.class) || clazz.equals(Integer.class) || clazz.equals(Character.class)
 				|| clazz.equals(Byte.class) || clazz.equals(Short.class) || clazz.equals(Double.class)
