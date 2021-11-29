@@ -131,8 +131,11 @@ public class Inspector {
 			this.print("Value: " + obj, depth);
 		} else {
 			this.print("Value (ref): " + this.getObjectHashSignature(obj), depth);
-			this.print("CLASS", depth + 1);
-			this.inspectClass(c, obj, recursive, depth + 2);
+
+			if (recursive) {
+				this.print("CLASS (" + this.getObjectHashSignature(obj) + ")", depth + 1);
+				this.inspectClass(obj.getClass(), obj, recursive, depth + 2);
+			}
 		}
 	}
 
@@ -146,17 +149,7 @@ public class Inspector {
 		if (array != null) {
 			for (int t = 0; t < Array.getLength(array); t++) {
 				Object object = Array.get(array, t);
-
-				if(componentType.isPrimitive() || this.isWrapperType(componentType) || object == null) {
-					this.print("Value: " + object, depth + 1);
-				} else {
-					this.print("Value (ref): " + this.getObjectHashSignature(object), depth + 1);
-
-					if (recursive) {
-						this.print("CLASS (" + this.getObjectHashSignature(object) + ")", depth + 2);
-						this.inspectClass(object.getClass(), object, recursive, depth + 3);
-					}
-				}
+				this.inspectObjectValue(componentType, object, recursive, depth + 1);
 			}
 		}
 	}
