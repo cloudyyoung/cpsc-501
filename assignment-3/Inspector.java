@@ -142,15 +142,19 @@ public class Inspector {
 	private void inspectArrayValues(Object array, boolean recursive, int depth) {
 		Class c = array.getClass();
 		Class componentType = c.getComponentType();
-		this.print("Component type: " + componentType, depth);
-		this.print("Length: " + Array.getLength(array), depth);
-		this.print("Entries ->", depth);
+		int length = Array.getLength(array);
 
-		if (array != null) {
-			for (int t = 0; t < Array.getLength(array); t++) {
+		this.print("Component type: " + componentType, depth);
+		this.print("Length: " + length, depth);
+		if (length != 0) {
+			this.print("Entries ->", depth);
+			
+			for (int t = 0; t < length; t++) {
 				Object object = Array.get(array, t);
 				this.inspectObjectValue(componentType, object, recursive, depth + 1);
 			}
+		} else {
+			this.print("Entries: NONE", depth);
 		}
 	}
 
