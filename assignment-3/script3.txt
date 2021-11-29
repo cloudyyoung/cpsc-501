@@ -256,11 +256,12 @@ Superclass (ClassB) ->
                                         Return type: java.lang.String
                                         Exceptions: NONE
                                     METHOD (ClassA)
-                                        Name: getVal
+                                        Name: setVal
                                         Modifiers: public
-                                        Parameter types: NONE
-                                        Return type: int
-                                        Exceptions: NONE
+                                        Parameter types: [int]
+                                        Return type: void
+                                        Exceptions -> 
+                                            java.lang.Exception
                                     METHOD (ClassA)
                                         Name: printSomething
                                         Modifiers: private
@@ -268,12 +269,11 @@ Superclass (ClassB) ->
                                         Return type: void
                                         Exceptions: NONE
                                     METHOD (ClassA)
-                                        Name: setVal
+                                        Name: getVal
                                         Modifiers: public
-                                        Parameter types: [int]
-                                        Return type: void
-                                        Exceptions -> 
-                                            java.lang.Exception
+                                        Parameter types: NONE
+                                        Return type: int
+                                        Exceptions: NONE
                                 Fields (ClassA) -> 
                                     FIELD (ClassA)
                                         Name: val
@@ -389,6 +389,13 @@ Superclass (ClassB) ->
                     java.lang.ArithmeticException
                     java.lang.IllegalMonitorStateException
             METHOD (ClassC)
+                Name: func0
+                Modifiers: public
+                Parameter types: [int, boolean]
+                Return type: void
+                Exceptions -> 
+                    java.lang.Exception
+            METHOD (ClassC)
                 Name: func1
                 Modifiers: public
                 Parameter types: [int, double, boolean, java.lang.String]
@@ -401,13 +408,6 @@ Superclass (ClassB) ->
                 Parameter types: [int]
                 Return type: void
                 Exceptions: NONE
-            METHOD (ClassC)
-                Name: func0
-                Modifiers: public
-                Parameter types: [int, boolean]
-                Return type: void
-                Exceptions -> 
-                    java.lang.Exception
         Fields (ClassC) -> 
             FIELD (ClassC)
                 Name: val2
@@ -546,11 +546,12 @@ Superclass (ClassB) ->
                                 Return type: java.lang.String
                                 Exceptions: NONE
                             METHOD (ClassA)
-                                Name: getVal
+                                Name: setVal
                                 Modifiers: public
-                                Parameter types: NONE
-                                Return type: int
-                                Exceptions: NONE
+                                Parameter types: [int]
+                                Return type: void
+                                Exceptions -> 
+                                    java.lang.Exception
                             METHOD (ClassA)
                                 Name: printSomething
                                 Modifiers: private
@@ -558,12 +559,11 @@ Superclass (ClassB) ->
                                 Return type: void
                                 Exceptions: NONE
                             METHOD (ClassA)
-                                Name: setVal
+                                Name: getVal
                                 Modifiers: public
-                                Parameter types: [int]
-                                Return type: void
-                                Exceptions -> 
-                                    java.lang.Exception
+                                Parameter types: NONE
+                                Return type: int
+                                Exceptions: NONE
                         Fields (ClassA) -> 
                             FIELD (ClassA)
                                 Name: val
@@ -717,11 +717,12 @@ Superclass (ClassB) ->
                                 Return type: java.lang.String
                                 Exceptions: NONE
                             METHOD (ClassA)
-                                Name: getVal
+                                Name: setVal
                                 Modifiers: public
-                                Parameter types: NONE
-                                Return type: int
-                                Exceptions: NONE
+                                Parameter types: [int]
+                                Return type: void
+                                Exceptions -> 
+                                    java.lang.Exception
                             METHOD (ClassA)
                                 Name: printSomething
                                 Modifiers: private
@@ -729,12 +730,11 @@ Superclass (ClassB) ->
                                 Return type: void
                                 Exceptions: NONE
                             METHOD (ClassA)
-                                Name: setVal
+                                Name: getVal
                                 Modifiers: public
-                                Parameter types: [int]
-                                Return type: void
-                                Exceptions -> 
-                                    java.lang.Exception
+                                Parameter types: NONE
+                                Return type: int
+                                Exceptions: NONE
                         Fields (ClassA) -> 
                             FIELD (ClassA)
                                 Name: val
@@ -888,11 +888,12 @@ Superclass (ClassB) ->
                                 Return type: java.lang.String
                                 Exceptions: NONE
                             METHOD (ClassA)
-                                Name: getVal
+                                Name: setVal
                                 Modifiers: public
-                                Parameter types: NONE
-                                Return type: int
-                                Exceptions: NONE
+                                Parameter types: [int]
+                                Return type: void
+                                Exceptions -> 
+                                    java.lang.Exception
                             METHOD (ClassA)
                                 Name: printSomething
                                 Modifiers: private
@@ -900,12 +901,11 @@ Superclass (ClassB) ->
                                 Return type: void
                                 Exceptions: NONE
                             METHOD (ClassA)
-                                Name: setVal
+                                Name: getVal
                                 Modifiers: public
-                                Parameter types: [int]
-                                Return type: void
-                                Exceptions -> 
-                                    java.lang.Exception
+                                Parameter types: NONE
+                                Return type: int
+                                Exceptions: NONE
                         Fields (ClassA) -> 
                             FIELD (ClassA)
                                 Name: val
@@ -1100,11 +1100,12 @@ Fields (ClassB) ->
                         Return type: java.lang.String
                         Exceptions: NONE
                     METHOD (ClassA)
-                        Name: getVal
+                        Name: setVal
                         Modifiers: public
-                        Parameter types: NONE
-                        Return type: int
-                        Exceptions: NONE
+                        Parameter types: [int]
+                        Return type: void
+                        Exceptions -> 
+                            java.lang.Exception
                     METHOD (ClassA)
                         Name: printSomething
                         Modifiers: private
@@ -1112,12 +1113,11 @@ Fields (ClassB) ->
                         Return type: void
                         Exceptions: NONE
                     METHOD (ClassA)
-                        Name: setVal
+                        Name: getVal
                         Modifiers: public
-                        Parameter types: [int]
-                        Return type: void
-                        Exceptions -> 
-                            java.lang.Exception
+                        Parameter types: NONE
+                        Return type: int
+                        Exceptions: NONE
                 Fields (ClassA) -> 
                     FIELD (ClassA)
                         Name: val
@@ -1271,11 +1271,12 @@ Fields (ClassB) ->
                         Return type: java.lang.String
                         Exceptions: NONE
                     METHOD (ClassA)
-                        Name: getVal
+                        Name: setVal
                         Modifiers: public
-                        Parameter types: NONE
-                        Return type: int
-                        Exceptions: NONE
+                        Parameter types: [int]
+                        Return type: void
+                        Exceptions -> 
+                            java.lang.Exception
                     METHOD (ClassA)
                         Name: printSomething
                         Modifiers: private
@@ -1283,12 +1284,11 @@ Fields (ClassB) ->
                         Return type: void
                         Exceptions: NONE
                     METHOD (ClassA)
-                        Name: setVal
+                        Name: getVal
                         Modifiers: public
-                        Parameter types: [int]
-                        Return type: void
-                        Exceptions -> 
-                            java.lang.Exception
+                        Parameter types: NONE
+                        Return type: int
+                        Exceptions: NONE
                 Fields (ClassA) -> 
                     FIELD (ClassA)
                         Name: val

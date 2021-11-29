@@ -963,7 +963,7 @@ Fields (java.lang.String) ->
         Modifiers: private static final
         Component type: class java.io.ObjectStreamField
         Length: 0
-        Entries ->
+        Entries: EMPTY
     FIELD (java.lang.String)
         Name: CASE_INSENSITIVE_ORDER
         Type: java.util.Comparator
