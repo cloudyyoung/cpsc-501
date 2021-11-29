@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch DriverBonus",
+            "request": "launch",
+            "mainClass": "DriverBonus",
+            "projectName": "assignment-3_91f6b8d7"
+        },
+        {
+            "type": "java",
             "name": "Launch Driver",
             "request": "launch",
             "mainClass": "Driver",
