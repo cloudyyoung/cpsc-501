@@ -39,63 +39,63 @@ public class Inspector {
 
 	private void inspectSuperClass(Class c, Object obj, boolean recursive, int depth) {
 		if (c != null && c.getSuperclass() != null) {
-			this.print("Superclass -> ", depth);
+			this.print("Superclass (" + c.getName() + ") -> ", depth);
 			this.print("SUPERCLASS (" + c.getName() + ")", depth + 1);
 			this.inspectClass(c.getSuperclass(), obj, recursive, depth + 2);
 		} else {
-			this.print("Superclass: NONE", depth);
+			this.print("Superclass (" + c.getName() + "): NONE", depth);
 		}
 	}
 
 	private void inspectInterfaces(Class c, Object obj, boolean recursive, int depth) {
 		Class[] interfaces = c.getInterfaces();
 		if (interfaces != null && interfaces.length != 0) {
-			this.print("Interfaces ->", depth);
+			this.print("Interfaces (" + c.getName() + ") ->", depth);
 			for (Class i : interfaces) {
 				this.print("INTERFACE (" + c.getName() + ")", depth + 1);
 				this.inspectClass(i, obj, recursive, depth + 2);
 			}
 		} else {
-			this.print("Interfaces: NONE", depth);
+			this.print("Interfaces (" + c.getName() + "): NONE", depth);
 		}
 	}
 
 	private void inspectConstructors(Class c, Object obj, boolean recursive, int depth) {
 		Constructor[] constructors = c.getConstructors();
 		if (constructors != null && constructors.length != 0) {
-			this.print("Constructors -> ", depth);
+			this.print("Constructors (" + c.getName() + ") -> ", depth);
 			for (Constructor constructor : constructors) {
 				this.print("CONSTRUCTOR (" + c.getName() + ")", depth + 1);
 				this.inspectExecutable(constructor, obj, recursive, depth + 2);
 			}
 		} else {
-			this.print("Constructors: NONE", depth);
+			this.print("Constructors (" + c.getName() + "): NONE", depth);
 		}
 	}
 
 	private void inspectMethods(Class c, Object obj, boolean recursive, int depth) {
 		Method[] methods = c.getDeclaredMethods();
 		if (methods != null && methods.length != 0) {
-			this.print("Methods -> ", depth);
+			this.print("Methods (" + c.getName() + ") -> ", depth);
 			for (Method method : methods) {
 				this.print("METHOD (" + c.getName() + ")", depth + 1);
 				this.inspectExecutable(method, obj, recursive, depth + 2);
 			}
 		} else {
-			this.print("Methods: NONE", depth);
+			this.print("Methods (" + c.getName() + "): NONE", depth);
 		}
 	}
 
 	private void inspectFields(Class c, Object obj, boolean recursive, int depth) {
 		Field[] fields = c.getDeclaredFields();
 		if (fields != null && fields.length != 0) {
-			this.print("Fields -> ", depth);
+			this.print("Fields (" + c.getName() + ") -> ", depth);
 			for (Field field : fields) {
 				this.print("FIELD (" + c.getName() + ")", depth + 1);
 				this.inspectField(c, field, obj, recursive, depth + 2);
 			}
 		} else {
-			this.print("Fields: NONE ", depth);
+			this.print("Fields (" + c.getName() + "): NONE ", depth);
 		}
 	}
 
