@@ -118,7 +118,7 @@ Fields (ClassD) ->
         Type: ClassA
         Modifiers: private
         Value (ref): ClassA@65ab7765
-            CLASS
+            CLASS (ClassA@65ab7765)
                 Name: ClassA
                 Superclass (ClassA) -> 
                     SUPERCLASS (ClassA)
@@ -250,13 +250,6 @@ Fields (ClassD) ->
                         Return type: java.lang.String
                         Exceptions: NONE
                     METHOD (ClassA)
-                        Name: setVal
-                        Modifiers: public
-                        Parameter types: [int]
-                        Return type: void
-                        Exceptions -> 
-                            java.lang.Exception
-                    METHOD (ClassA)
                         Name: getVal
                         Modifiers: public
                         Parameter types: NONE
@@ -268,6 +261,13 @@ Fields (ClassD) ->
                         Parameter types: NONE
                         Return type: void
                         Exceptions: NONE
+                    METHOD (ClassA)
+                        Name: setVal
+                        Modifiers: public
+                        Parameter types: [int]
+                        Return type: void
+                        Exceptions -> 
+                            java.lang.Exception
                 Fields (ClassA) -> 
                     FIELD (ClassA)
                         Name: val

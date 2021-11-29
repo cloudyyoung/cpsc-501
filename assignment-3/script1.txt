@@ -133,13 +133,6 @@ Methods (ClassA) ->
         Return type: java.lang.String
         Exceptions: NONE
     METHOD (ClassA)
-        Name: setVal
-        Modifiers: public
-        Parameter types: [int]
-        Return type: void
-        Exceptions -> 
-            java.lang.Exception
-    METHOD (ClassA)
         Name: getVal
         Modifiers: public
         Parameter types: NONE
@@ -151,6 +144,13 @@ Methods (ClassA) ->
         Parameter types: NONE
         Return type: void
         Exceptions: NONE
+    METHOD (ClassA)
+        Name: setVal
+        Modifiers: public
+        Parameter types: [int]
+        Return type: void
+        Exceptions -> 
+            java.lang.Exception
 Fields (ClassA) -> 
     FIELD (ClassA)
         Name: val
