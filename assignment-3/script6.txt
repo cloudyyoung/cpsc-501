@@ -4,8 +4,8 @@ Running Test: [LClassB;@eed1f14
 Recursive: true
 Name: [LClassB;
 Type name: ClassB[]
-Component type: class ClassB
 Modifiers: public abstract final
+Component type: class ClassB
 Length: 12
 Entries ->
     Value: null

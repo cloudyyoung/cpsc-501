@@ -3,24 +3,24 @@ Filename: script3.txt
 Running Test: ClassB
 Recursive: true
 Name: ClassB
-Superclass -> 
+Superclass (ClassB) -> 
     SUPERCLASS (ClassB)
         Name: ClassC
-        Superclass -> 
+        Superclass (ClassC) -> 
             SUPERCLASS (ClassC)
                 Name: ClassD
-                Superclass -> 
+                Superclass (ClassD) -> 
                     SUPERCLASS (ClassD)
                         Name: java.lang.Object
-                        Superclass: NONE
-                        Interfaces: NONE
-                        Constructors -> 
+                        Superclass (java.lang.Object): NONE
+                        Interfaces (java.lang.Object): NONE
+                        Constructors (java.lang.Object) -> 
                             CONSTRUCTOR (java.lang.Object)
                                 Name: java.lang.Object
                                 Modifiers: public
                                 Parameter types: NONE
                                 Exceptions: NONE
-                        Methods -> 
+                        Methods (java.lang.Object) -> 
                             METHOD (java.lang.Object)
                                 Name: finalize
                                 Modifiers: protected
@@ -92,9 +92,9 @@ Superclass ->
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                        Fields: NONE 
-                Interfaces: NONE
-                Constructors -> 
+                        Fields (java.lang.Object): NONE 
+                Interfaces (ClassD): NONE
+                Constructors (ClassD) -> 
                     CONSTRUCTOR (ClassD)
                         Name: ClassD
                         Modifiers: public
@@ -105,7 +105,7 @@ Superclass ->
                         Modifiers: public
                         Parameter types: [int]
                         Exceptions: NONE
-                Methods -> 
+                Methods (ClassD) -> 
                     METHOD (ClassD)
                         Name: toString
                         Modifiers: public
@@ -118,7 +118,7 @@ Superclass ->
                         Parameter types: NONE
                         Return type: int
                         Exceptions: NONE
-                Fields -> 
+                Fields (ClassD) -> 
                     FIELD (ClassD)
                         Name: val
                         Type: ClassA
@@ -126,18 +126,18 @@ Superclass ->
                         Value (ref): ClassA@548c4f57
                             CLASS
                                 Name: ClassA
-                                Superclass -> 
+                                Superclass (ClassA) -> 
                                     SUPERCLASS (ClassA)
                                         Name: java.lang.Object
-                                        Superclass: NONE
-                                        Interfaces: NONE
-                                        Constructors -> 
+                                        Superclass (java.lang.Object): NONE
+                                        Interfaces (java.lang.Object): NONE
+                                        Constructors (java.lang.Object) -> 
                                             CONSTRUCTOR (java.lang.Object)
                                                 Name: java.lang.Object
                                                 Modifiers: public
                                                 Parameter types: NONE
                                                 Exceptions: NONE
-                                        Methods -> 
+                                        Methods (java.lang.Object) -> 
                                             METHOD (java.lang.Object)
                                                 Name: finalize
                                                 Modifiers: protected
@@ -209,29 +209,29 @@ Superclass ->
                                                 Parameter types: NONE
                                                 Return type: void
                                                 Exceptions: NONE
-                                        Fields: NONE 
-                                Interfaces ->
+                                        Fields (java.lang.Object): NONE 
+                                Interfaces (ClassA) ->
                                     INTERFACE (ClassA)
                                         Name: java.io.Serializable
-                                        Superclass: NONE
-                                        Interfaces: NONE
-                                        Constructors: NONE
-                                        Methods: NONE
-                                        Fields: NONE 
+                                        Superclass (java.io.Serializable): NONE
+                                        Interfaces (java.io.Serializable): NONE
+                                        Constructors (java.io.Serializable): NONE
+                                        Methods (java.io.Serializable): NONE
+                                        Fields (java.io.Serializable): NONE 
                                     INTERFACE (ClassA)
                                         Name: java.lang.Runnable
-                                        Superclass: NONE
-                                        Interfaces: NONE
-                                        Constructors: NONE
-                                        Methods -> 
+                                        Superclass (java.lang.Runnable): NONE
+                                        Interfaces (java.lang.Runnable): NONE
+                                        Constructors (java.lang.Runnable): NONE
+                                        Methods (java.lang.Runnable) -> 
                                             METHOD (java.lang.Runnable)
                                                 Name: run
                                                 Modifiers: public abstract
                                                 Parameter types: NONE
                                                 Return type: void
                                                 Exceptions: NONE
-                                        Fields: NONE 
-                                Constructors -> 
+                                        Fields (java.lang.Runnable): NONE 
+                                Constructors (ClassA) -> 
                                     CONSTRUCTOR (ClassA)
                                         Name: ClassA
                                         Modifiers: public
@@ -242,7 +242,7 @@ Superclass ->
                                         Modifiers: public
                                         Parameter types: [int]
                                         Exceptions: NONE
-                                Methods -> 
+                                Methods (ClassA) -> 
                                     METHOD (ClassA)
                                         Name: run
                                         Modifiers: public
@@ -256,6 +256,13 @@ Superclass ->
                                         Return type: java.lang.String
                                         Exceptions: NONE
                                     METHOD (ClassA)
+                                        Name: setVal
+                                        Modifiers: public
+                                        Parameter types: [int]
+                                        Return type: void
+                                        Exceptions -> 
+                                            java.lang.Exception
+                                    METHOD (ClassA)
                                         Name: getVal
                                         Modifiers: public
                                         Parameter types: NONE
@@ -267,14 +274,7 @@ Superclass ->
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions: NONE
-                                    METHOD (ClassA)
-                                        Name: setVal
-                                        Modifiers: public
-                                        Parameter types: [int]
-                                        Return type: void
-                                        Exceptions -> 
-                                            java.lang.Exception
-                                Fields -> 
+                                Fields (ClassA) -> 
                                     FIELD (ClassA)
                                         Name: val
                                         Type: int
@@ -304,6 +304,7 @@ Superclass ->
                         Name: vallarray
                         Type: [LClassA;
                         Modifiers: private
+                        Component type: class ClassA
                         Length: 10
                         Entries ->
                             Value: null
@@ -316,17 +317,17 @@ Superclass ->
                             Value: null
                             Value: null
                             Value: null
-        Interfaces ->
+        Interfaces (ClassC) ->
             INTERFACE (ClassC)
                 Name: InterfaceA
-                Superclass: NONE
-                Interfaces ->
+                Superclass (InterfaceA): NONE
+                Interfaces (InterfaceA) ->
                     INTERFACE (InterfaceA)
                         Name: InterfaceB
-                        Superclass: NONE
-                        Interfaces: NONE
-                        Constructors: NONE
-                        Methods -> 
+                        Superclass (InterfaceB): NONE
+                        Interfaces (InterfaceB): NONE
+                        Constructors (InterfaceB): NONE
+                        Methods (InterfaceB) -> 
                             METHOD (InterfaceB)
                                 Name: func0
                                 Modifiers: public abstract
@@ -334,9 +335,9 @@ Superclass ->
                                 Return type: void
                                 Exceptions -> 
                                     java.lang.Exception
-                        Fields: NONE 
-                Constructors: NONE
-                Methods -> 
+                        Fields (InterfaceB): NONE 
+                Constructors (InterfaceA): NONE
+                Methods (InterfaceA) -> 
                     METHOD (InterfaceA)
                         Name: func1
                         Modifiers: public abstract
@@ -353,8 +354,8 @@ Superclass ->
                             java.lang.Exception
                             java.lang.ArithmeticException
                             java.lang.IllegalMonitorStateException
-                Fields: NONE 
-        Constructors -> 
+                Fields (InterfaceA): NONE 
+        Constructors (ClassC) -> 
             CONSTRUCTOR (ClassC)
                 Name: ClassC
                 Modifiers: public
@@ -365,7 +366,7 @@ Superclass ->
                 Modifiers: public
                 Parameter types: [int, int]
                 Exceptions: NONE
-        Methods -> 
+        Methods (ClassC) -> 
             METHOD (ClassC)
                 Name: run
                 Modifiers: public
@@ -379,15 +380,22 @@ Superclass ->
                 Return type: java.lang.String
                 Exceptions: NONE
             METHOD (ClassC)
+                Name: func1
+                Modifiers: public
+                Parameter types: [int, double, boolean, java.lang.String]
+                Return type: void
+                Exceptions -> 
+                    java.lang.Exception
+            METHOD (ClassC)
                 Name: func3
                 Modifiers: public abstract
                 Parameter types: [int]
                 Return type: void
                 Exceptions: NONE
             METHOD (ClassC)
-                Name: func1
+                Name: func0
                 Modifiers: public
-                Parameter types: [int, double, boolean, java.lang.String]
+                Parameter types: [int, boolean]
                 Return type: void
                 Exceptions -> 
                     java.lang.Exception
@@ -400,14 +408,7 @@ Superclass ->
                     java.lang.Exception
                     java.lang.ArithmeticException
                     java.lang.IllegalMonitorStateException
-            METHOD (ClassC)
-                Name: func0
-                Modifiers: public
-                Parameter types: [int, boolean]
-                Return type: void
-                Exceptions -> 
-                    java.lang.Exception
-        Fields -> 
+        Fields (ClassC) -> 
             FIELD (ClassC)
                 Name: val2
                 Type: ClassA
@@ -415,18 +416,18 @@ Superclass ->
                 Value (ref): ClassA@87aac27
                     CLASS
                         Name: ClassA
-                        Superclass -> 
+                        Superclass (ClassA) -> 
                             SUPERCLASS (ClassA)
                                 Name: java.lang.Object
-                                Superclass: NONE
-                                Interfaces: NONE
-                                Constructors -> 
+                                Superclass (java.lang.Object): NONE
+                                Interfaces (java.lang.Object): NONE
+                                Constructors (java.lang.Object) -> 
                                     CONSTRUCTOR (java.lang.Object)
                                         Name: java.lang.Object
                                         Modifiers: public
                                         Parameter types: NONE
                                         Exceptions: NONE
-                                Methods -> 
+                                Methods (java.lang.Object) -> 
                                     METHOD (java.lang.Object)
                                         Name: finalize
                                         Modifiers: protected
@@ -498,29 +499,29 @@ Superclass ->
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions: NONE
-                                Fields: NONE 
-                        Interfaces ->
+                                Fields (java.lang.Object): NONE 
+                        Interfaces (ClassA) ->
                             INTERFACE (ClassA)
                                 Name: java.io.Serializable
-                                Superclass: NONE
-                                Interfaces: NONE
-                                Constructors: NONE
-                                Methods: NONE
-                                Fields: NONE 
+                                Superclass (java.io.Serializable): NONE
+                                Interfaces (java.io.Serializable): NONE
+                                Constructors (java.io.Serializable): NONE
+                                Methods (java.io.Serializable): NONE
+                                Fields (java.io.Serializable): NONE 
                             INTERFACE (ClassA)
                                 Name: java.lang.Runnable
-                                Superclass: NONE
-                                Interfaces: NONE
-                                Constructors: NONE
-                                Methods -> 
+                                Superclass (java.lang.Runnable): NONE
+                                Interfaces (java.lang.Runnable): NONE
+                                Constructors (java.lang.Runnable): NONE
+                                Methods (java.lang.Runnable) -> 
                                     METHOD (java.lang.Runnable)
                                         Name: run
                                         Modifiers: public abstract
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions: NONE
-                                Fields: NONE 
-                        Constructors -> 
+                                Fields (java.lang.Runnable): NONE 
+                        Constructors (ClassA) -> 
                             CONSTRUCTOR (ClassA)
                                 Name: ClassA
                                 Modifiers: public
@@ -531,7 +532,7 @@ Superclass ->
                                 Modifiers: public
                                 Parameter types: [int]
                                 Exceptions: NONE
-                        Methods -> 
+                        Methods (ClassA) -> 
                             METHOD (ClassA)
                                 Name: run
                                 Modifiers: public
@@ -545,6 +546,13 @@ Superclass ->
                                 Return type: java.lang.String
                                 Exceptions: NONE
                             METHOD (ClassA)
+                                Name: setVal
+                                Modifiers: public
+                                Parameter types: [int]
+                                Return type: void
+                                Exceptions -> 
+                                    java.lang.Exception
+                            METHOD (ClassA)
                                 Name: getVal
                                 Modifiers: public
                                 Parameter types: NONE
@@ -556,14 +564,7 @@ Superclass ->
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                            METHOD (ClassA)
-                                Name: setVal
-                                Modifiers: public
-                                Parameter types: [int]
-                                Return type: void
-                                Exceptions -> 
-                                    java.lang.Exception
-                        Fields -> 
+                        Fields (ClassA) -> 
                             FIELD (ClassA)
                                 Name: val
                                 Type: int
@@ -586,18 +587,18 @@ Superclass ->
                 Value (ref): ClassA@3e3abc88
                     CLASS
                         Name: ClassA
-                        Superclass -> 
+                        Superclass (ClassA) -> 
                             SUPERCLASS (ClassA)
                                 Name: java.lang.Object
-                                Superclass: NONE
-                                Interfaces: NONE
-                                Constructors -> 
+                                Superclass (java.lang.Object): NONE
+                                Interfaces (java.lang.Object): NONE
+                                Constructors (java.lang.Object) -> 
                                     CONSTRUCTOR (java.lang.Object)
                                         Name: java.lang.Object
                                         Modifiers: public
                                         Parameter types: NONE
                                         Exceptions: NONE
-                                Methods -> 
+                                Methods (java.lang.Object) -> 
                                     METHOD (java.lang.Object)
                                         Name: finalize
                                         Modifiers: protected
@@ -669,29 +670,29 @@ Superclass ->
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions: NONE
-                                Fields: NONE 
-                        Interfaces ->
+                                Fields (java.lang.Object): NONE 
+                        Interfaces (ClassA) ->
                             INTERFACE (ClassA)
                                 Name: java.io.Serializable
-                                Superclass: NONE
-                                Interfaces: NONE
-                                Constructors: NONE
-                                Methods: NONE
-                                Fields: NONE 
+                                Superclass (java.io.Serializable): NONE
+                                Interfaces (java.io.Serializable): NONE
+                                Constructors (java.io.Serializable): NONE
+                                Methods (java.io.Serializable): NONE
+                                Fields (java.io.Serializable): NONE 
                             INTERFACE (ClassA)
                                 Name: java.lang.Runnable
-                                Superclass: NONE
-                                Interfaces: NONE
-                                Constructors: NONE
-                                Methods -> 
+                                Superclass (java.lang.Runnable): NONE
+                                Interfaces (java.lang.Runnable): NONE
+                                Constructors (java.lang.Runnable): NONE
+                                Methods (java.lang.Runnable) -> 
                                     METHOD (java.lang.Runnable)
                                         Name: run
                                         Modifiers: public abstract
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions: NONE
-                                Fields: NONE 
-                        Constructors -> 
+                                Fields (java.lang.Runnable): NONE 
+                        Constructors (ClassA) -> 
                             CONSTRUCTOR (ClassA)
                                 Name: ClassA
                                 Modifiers: public
@@ -702,7 +703,7 @@ Superclass ->
                                 Modifiers: public
                                 Parameter types: [int]
                                 Exceptions: NONE
-                        Methods -> 
+                        Methods (ClassA) -> 
                             METHOD (ClassA)
                                 Name: run
                                 Modifiers: public
@@ -716,6 +717,13 @@ Superclass ->
                                 Return type: java.lang.String
                                 Exceptions: NONE
                             METHOD (ClassA)
+                                Name: setVal
+                                Modifiers: public
+                                Parameter types: [int]
+                                Return type: void
+                                Exceptions -> 
+                                    java.lang.Exception
+                            METHOD (ClassA)
                                 Name: getVal
                                 Modifiers: public
                                 Parameter types: NONE
@@ -727,14 +735,7 @@ Superclass ->
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                            METHOD (ClassA)
-                                Name: setVal
-                                Modifiers: public
-                                Parameter types: [int]
-                                Return type: void
-                                Exceptions -> 
-                                    java.lang.Exception
-                        Fields -> 
+                        Fields (ClassA) -> 
                             FIELD (ClassA)
                                 Name: val
                                 Type: int
@@ -757,18 +758,18 @@ Superclass ->
                 Value (ref): ClassA@6ce253f1
                     CLASS
                         Name: ClassA
-                        Superclass -> 
+                        Superclass (ClassA) -> 
                             SUPERCLASS (ClassA)
                                 Name: java.lang.Object
-                                Superclass: NONE
-                                Interfaces: NONE
-                                Constructors -> 
+                                Superclass (java.lang.Object): NONE
+                                Interfaces (java.lang.Object): NONE
+                                Constructors (java.lang.Object) -> 
                                     CONSTRUCTOR (java.lang.Object)
                                         Name: java.lang.Object
                                         Modifiers: public
                                         Parameter types: NONE
                                         Exceptions: NONE
-                                Methods -> 
+                                Methods (java.lang.Object) -> 
                                     METHOD (java.lang.Object)
                                         Name: finalize
                                         Modifiers: protected
@@ -840,29 +841,29 @@ Superclass ->
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions: NONE
-                                Fields: NONE 
-                        Interfaces ->
+                                Fields (java.lang.Object): NONE 
+                        Interfaces (ClassA) ->
                             INTERFACE (ClassA)
                                 Name: java.io.Serializable
-                                Superclass: NONE
-                                Interfaces: NONE
-                                Constructors: NONE
-                                Methods: NONE
-                                Fields: NONE 
+                                Superclass (java.io.Serializable): NONE
+                                Interfaces (java.io.Serializable): NONE
+                                Constructors (java.io.Serializable): NONE
+                                Methods (java.io.Serializable): NONE
+                                Fields (java.io.Serializable): NONE 
                             INTERFACE (ClassA)
                                 Name: java.lang.Runnable
-                                Superclass: NONE
-                                Interfaces: NONE
-                                Constructors: NONE
-                                Methods -> 
+                                Superclass (java.lang.Runnable): NONE
+                                Interfaces (java.lang.Runnable): NONE
+                                Constructors (java.lang.Runnable): NONE
+                                Methods (java.lang.Runnable) -> 
                                     METHOD (java.lang.Runnable)
                                         Name: run
                                         Modifiers: public abstract
                                         Parameter types: NONE
                                         Return type: void
                                         Exceptions: NONE
-                                Fields: NONE 
-                        Constructors -> 
+                                Fields (java.lang.Runnable): NONE 
+                        Constructors (ClassA) -> 
                             CONSTRUCTOR (ClassA)
                                 Name: ClassA
                                 Modifiers: public
@@ -873,7 +874,7 @@ Superclass ->
                                 Modifiers: public
                                 Parameter types: [int]
                                 Exceptions: NONE
-                        Methods -> 
+                        Methods (ClassA) -> 
                             METHOD (ClassA)
                                 Name: run
                                 Modifiers: public
@@ -887,6 +888,13 @@ Superclass ->
                                 Return type: java.lang.String
                                 Exceptions: NONE
                             METHOD (ClassA)
+                                Name: setVal
+                                Modifiers: public
+                                Parameter types: [int]
+                                Return type: void
+                                Exceptions -> 
+                                    java.lang.Exception
+                            METHOD (ClassA)
                                 Name: getVal
                                 Modifiers: public
                                 Parameter types: NONE
@@ -898,14 +906,7 @@ Superclass ->
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                            METHOD (ClassA)
-                                Name: setVal
-                                Modifiers: public
-                                Parameter types: [int]
-                                Return type: void
-                                Exceptions -> 
-                                    java.lang.Exception
-                        Fields -> 
+                        Fields (ClassA) -> 
                             FIELD (ClassA)
                                 Name: val
                                 Type: int
@@ -921,28 +922,28 @@ Superclass ->
                                 Type: boolean
                                 Modifiers: private
                                 Value: true
-Interfaces ->
+Interfaces (ClassB) ->
     INTERFACE (ClassB)
         Name: java.lang.Runnable
-        Superclass: NONE
-        Interfaces: NONE
-        Constructors: NONE
-        Methods -> 
+        Superclass (java.lang.Runnable): NONE
+        Interfaces (java.lang.Runnable): NONE
+        Constructors (java.lang.Runnable): NONE
+        Methods (java.lang.Runnable) -> 
             METHOD (java.lang.Runnable)
                 Name: run
                 Modifiers: public abstract
                 Parameter types: NONE
                 Return type: void
                 Exceptions: NONE
-        Fields: NONE 
-Constructors -> 
+        Fields (java.lang.Runnable): NONE 
+Constructors (ClassB) -> 
     CONSTRUCTOR (ClassB)
         Name: ClassB
         Modifiers: public
         Parameter types: NONE
         Exceptions -> 
             java.lang.Exception
-Methods -> 
+Methods (ClassB) -> 
     METHOD (ClassB)
         Name: run
         Modifiers: public
@@ -961,7 +962,7 @@ Methods ->
         Parameter types: [int]
         Return type: void
         Exceptions: NONE
-Fields -> 
+Fields (ClassB) -> 
     FIELD (ClassB)
         Name: val
         Type: ClassA
@@ -969,18 +970,18 @@ Fields ->
         Value (ref): ClassA@53d8d10a
             CLASS
                 Name: ClassA
-                Superclass -> 
+                Superclass (ClassA) -> 
                     SUPERCLASS (ClassA)
                         Name: java.lang.Object
-                        Superclass: NONE
-                        Interfaces: NONE
-                        Constructors -> 
+                        Superclass (java.lang.Object): NONE
+                        Interfaces (java.lang.Object): NONE
+                        Constructors (java.lang.Object) -> 
                             CONSTRUCTOR (java.lang.Object)
                                 Name: java.lang.Object
                                 Modifiers: public
                                 Parameter types: NONE
                                 Exceptions: NONE
-                        Methods -> 
+                        Methods (java.lang.Object) -> 
                             METHOD (java.lang.Object)
                                 Name: finalize
                                 Modifiers: protected
@@ -1052,29 +1053,29 @@ Fields ->
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                        Fields: NONE 
-                Interfaces ->
+                        Fields (java.lang.Object): NONE 
+                Interfaces (ClassA) ->
                     INTERFACE (ClassA)
                         Name: java.io.Serializable
-                        Superclass: NONE
-                        Interfaces: NONE
-                        Constructors: NONE
-                        Methods: NONE
-                        Fields: NONE 
+                        Superclass (java.io.Serializable): NONE
+                        Interfaces (java.io.Serializable): NONE
+                        Constructors (java.io.Serializable): NONE
+                        Methods (java.io.Serializable): NONE
+                        Fields (java.io.Serializable): NONE 
                     INTERFACE (ClassA)
                         Name: java.lang.Runnable
-                        Superclass: NONE
-                        Interfaces: NONE
-                        Constructors: NONE
-                        Methods -> 
+                        Superclass (java.lang.Runnable): NONE
+                        Interfaces (java.lang.Runnable): NONE
+                        Constructors (java.lang.Runnable): NONE
+                        Methods (java.lang.Runnable) -> 
                             METHOD (java.lang.Runnable)
                                 Name: run
                                 Modifiers: public abstract
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                        Fields: NONE 
-                Constructors -> 
+                        Fields (java.lang.Runnable): NONE 
+                Constructors (ClassA) -> 
                     CONSTRUCTOR (ClassA)
                         Name: ClassA
                         Modifiers: public
@@ -1085,7 +1086,7 @@ Fields ->
                         Modifiers: public
                         Parameter types: [int]
                         Exceptions: NONE
-                Methods -> 
+                Methods (ClassA) -> 
                     METHOD (ClassA)
                         Name: run
                         Modifiers: public
@@ -1099,6 +1100,13 @@ Fields ->
                         Return type: java.lang.String
                         Exceptions: NONE
                     METHOD (ClassA)
+                        Name: setVal
+                        Modifiers: public
+                        Parameter types: [int]
+                        Return type: void
+                        Exceptions -> 
+                            java.lang.Exception
+                    METHOD (ClassA)
                         Name: getVal
                         Modifiers: public
                         Parameter types: NONE
@@ -1110,14 +1118,7 @@ Fields ->
                         Parameter types: NONE
                         Return type: void
                         Exceptions: NONE
-                    METHOD (ClassA)
-                        Name: setVal
-                        Modifiers: public
-                        Parameter types: [int]
-                        Return type: void
-                        Exceptions -> 
-                            java.lang.Exception
-                Fields -> 
+                Fields (ClassA) -> 
                     FIELD (ClassA)
                         Name: val
                         Type: int
@@ -1140,18 +1141,18 @@ Fields ->
         Value (ref): ClassA@e9e54c2
             CLASS
                 Name: ClassA
-                Superclass -> 
+                Superclass (ClassA) -> 
                     SUPERCLASS (ClassA)
                         Name: java.lang.Object
-                        Superclass: NONE
-                        Interfaces: NONE
-                        Constructors -> 
+                        Superclass (java.lang.Object): NONE
+                        Interfaces (java.lang.Object): NONE
+                        Constructors (java.lang.Object) -> 
                             CONSTRUCTOR (java.lang.Object)
                                 Name: java.lang.Object
                                 Modifiers: public
                                 Parameter types: NONE
                                 Exceptions: NONE
-                        Methods -> 
+                        Methods (java.lang.Object) -> 
                             METHOD (java.lang.Object)
                                 Name: finalize
                                 Modifiers: protected
@@ -1223,29 +1224,29 @@ Fields ->
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                        Fields: NONE 
-                Interfaces ->
+                        Fields (java.lang.Object): NONE 
+                Interfaces (ClassA) ->
                     INTERFACE (ClassA)
                         Name: java.io.Serializable
-                        Superclass: NONE
-                        Interfaces: NONE
-                        Constructors: NONE
-                        Methods: NONE
-                        Fields: NONE 
+                        Superclass (java.io.Serializable): NONE
+                        Interfaces (java.io.Serializable): NONE
+                        Constructors (java.io.Serializable): NONE
+                        Methods (java.io.Serializable): NONE
+                        Fields (java.io.Serializable): NONE 
                     INTERFACE (ClassA)
                         Name: java.lang.Runnable
-                        Superclass: NONE
-                        Interfaces: NONE
-                        Constructors: NONE
-                        Methods -> 
+                        Superclass (java.lang.Runnable): NONE
+                        Interfaces (java.lang.Runnable): NONE
+                        Constructors (java.lang.Runnable): NONE
+                        Methods (java.lang.Runnable) -> 
                             METHOD (java.lang.Runnable)
                                 Name: run
                                 Modifiers: public abstract
                                 Parameter types: NONE
                                 Return type: void
                                 Exceptions: NONE
-                        Fields: NONE 
-                Constructors -> 
+                        Fields (java.lang.Runnable): NONE 
+                Constructors (ClassA) -> 
                     CONSTRUCTOR (ClassA)
                         Name: ClassA
                         Modifiers: public
@@ -1256,7 +1257,7 @@ Fields ->
                         Modifiers: public
                         Parameter types: [int]
                         Exceptions: NONE
-                Methods -> 
+                Methods (ClassA) -> 
                     METHOD (ClassA)
                         Name: run
                         Modifiers: public
@@ -1270,6 +1271,13 @@ Fields ->
                         Return type: java.lang.String
                         Exceptions: NONE
                     METHOD (ClassA)
+                        Name: setVal
+                        Modifiers: public
+                        Parameter types: [int]
+                        Return type: void
+                        Exceptions -> 
+                            java.lang.Exception
+                    METHOD (ClassA)
                         Name: getVal
                         Modifiers: public
                         Parameter types: NONE
@@ -1281,14 +1289,7 @@ Fields ->
                         Parameter types: NONE
                         Return type: void
                         Exceptions: NONE
-                    METHOD (ClassA)
-                        Name: setVal
-                        Modifiers: public
-                        Parameter types: [int]
-                        Return type: void
-                        Exceptions -> 
-                            java.lang.Exception
-                Fields -> 
+                Fields (ClassA) -> 
                     FIELD (ClassA)
                         Name: val
                         Type: int

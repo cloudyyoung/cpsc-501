@@ -3,18 +3,18 @@ Filename: script8.txt
 Running Test: Test String
 Recursive: true
 Name: java.lang.String
-Superclass -> 
+Superclass (java.lang.String) -> 
     SUPERCLASS (java.lang.String)
         Name: java.lang.Object
-        Superclass: NONE
-        Interfaces: NONE
-        Constructors -> 
+        Superclass (java.lang.Object): NONE
+        Interfaces (java.lang.Object): NONE
+        Constructors (java.lang.Object) -> 
             CONSTRUCTOR (java.lang.Object)
                 Name: java.lang.Object
                 Modifiers: public
                 Parameter types: NONE
                 Exceptions: NONE
-        Methods -> 
+        Methods (java.lang.Object) -> 
             METHOD (java.lang.Object)
                 Name: finalize
                 Modifiers: protected
@@ -86,34 +86,34 @@ Superclass ->
                 Parameter types: NONE
                 Return type: void
                 Exceptions: NONE
-        Fields: NONE 
-Interfaces ->
+        Fields (java.lang.Object): NONE 
+Interfaces (java.lang.String) ->
     INTERFACE (java.lang.String)
         Name: java.io.Serializable
-        Superclass: NONE
-        Interfaces: NONE
-        Constructors: NONE
-        Methods: NONE
-        Fields: NONE 
+        Superclass (java.io.Serializable): NONE
+        Interfaces (java.io.Serializable): NONE
+        Constructors (java.io.Serializable): NONE
+        Methods (java.io.Serializable): NONE
+        Fields (java.io.Serializable): NONE 
     INTERFACE (java.lang.String)
         Name: java.lang.Comparable
-        Superclass: NONE
-        Interfaces: NONE
-        Constructors: NONE
-        Methods -> 
+        Superclass (java.lang.Comparable): NONE
+        Interfaces (java.lang.Comparable): NONE
+        Constructors (java.lang.Comparable): NONE
+        Methods (java.lang.Comparable) -> 
             METHOD (java.lang.Comparable)
                 Name: compareTo
                 Modifiers: public abstract
                 Parameter types: [java.lang.Object]
                 Return type: int
                 Exceptions: NONE
-        Fields: NONE 
+        Fields (java.lang.Comparable): NONE 
     INTERFACE (java.lang.String)
         Name: java.lang.CharSequence
-        Superclass: NONE
-        Interfaces: NONE
-        Constructors: NONE
-        Methods -> 
+        Superclass (java.lang.CharSequence): NONE
+        Interfaces (java.lang.CharSequence): NONE
+        Constructors (java.lang.CharSequence): NONE
+        Methods (java.lang.CharSequence) -> 
             METHOD (java.lang.CharSequence)
                 Name: length
                 Modifiers: public abstract
@@ -174,26 +174,26 @@ Interfaces ->
                 Parameter types: NONE
                 Return type: java.util.Spliterator$OfInt
                 Exceptions: NONE
-        Fields: NONE 
+        Fields (java.lang.CharSequence): NONE 
     INTERFACE (java.lang.String)
         Name: java.lang.constant.Constable
-        Superclass: NONE
-        Interfaces: NONE
-        Constructors: NONE
-        Methods -> 
+        Superclass (java.lang.constant.Constable): NONE
+        Interfaces (java.lang.constant.Constable): NONE
+        Constructors (java.lang.constant.Constable): NONE
+        Methods (java.lang.constant.Constable) -> 
             METHOD (java.lang.constant.Constable)
                 Name: describeConstable
                 Modifiers: public abstract
                 Parameter types: NONE
                 Return type: java.util.Optional
                 Exceptions: NONE
-        Fields: NONE 
+        Fields (java.lang.constant.Constable): NONE 
     INTERFACE (java.lang.String)
         Name: java.lang.constant.ConstantDesc
-        Superclass: NONE
-        Interfaces: NONE
-        Constructors: NONE
-        Methods -> 
+        Superclass (java.lang.constant.ConstantDesc): NONE
+        Interfaces (java.lang.constant.ConstantDesc): NONE
+        Constructors (java.lang.constant.ConstantDesc): NONE
+        Methods (java.lang.constant.ConstantDesc) -> 
             METHOD (java.lang.constant.ConstantDesc)
                 Name: resolveConstantDesc
                 Modifiers: public abstract
@@ -201,8 +201,8 @@ Interfaces ->
                 Return type: java.lang.Object
                 Exceptions -> 
                     java.lang.ReflectiveOperationException
-        Fields: NONE 
-Constructors -> 
+        Fields (java.lang.constant.ConstantDesc): NONE 
+Constructors (java.lang.String) -> 
     CONSTRUCTOR (java.lang.String)
         Name: java.lang.String
         Modifiers: public
@@ -280,7 +280,7 @@ Constructors ->
         Modifiers: public
         Parameter types: [[I, int, int]
         Exceptions: NONE
-Methods -> 
+Methods (java.lang.String) -> 
     METHOD (java.lang.String)
         Name: value
         Modifiers: 
@@ -913,7 +913,7 @@ Methods ->
         Parameter types: [java.lang.String, java.lang.String]
         Return type: java.lang.String
         Exceptions: NONE
-Fields -> 
+Fields (java.lang.String) -> 
     FIELD (java.lang.String)
         Name: value
         Type: [B
@@ -968,13 +968,13 @@ Fields ->
         Name: CASE_INSENSITIVE_ORDER
         Type: java.util.Comparator
         Modifiers: public static final
-        Value (ref): java.lang.String$CaseInsensitiveComparator@5fd0d5ae
+        Value (ref): java.lang.String$CaseInsensitiveComparator@3e3abc88
             CLASS
                 Name: java.util.Comparator
-                Superclass: NONE
-                Interfaces: NONE
-                Constructors: NONE
-                Methods -> 
+                Superclass (java.util.Comparator): NONE
+                Interfaces (java.util.Comparator): NONE
+                Constructors (java.util.Comparator): NONE
+                Methods (java.util.Comparator) -> 
                     METHOD (java.util.Comparator)
                         Name: equals
                         Modifiers: public abstract
@@ -1125,7 +1125,7 @@ Fields ->
                         Parameter types: [java.lang.invoke.SerializedLambda]
                         Return type: java.lang.Object
                         Exceptions: NONE
-                Fields: NONE 
+                Fields (java.util.Comparator): NONE 
     FIELD (java.lang.String)
         Name: LATIN1
         Type: byte
