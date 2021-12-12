@@ -72,7 +72,7 @@ def prepData():
     training_labels_onehot = []
     for training_label in training_labels:
         training_labels_onehot.append(onehot(training_label, 10))
-        
+    
     training_features = getImgData(trainingImageFile)
     testing_features = getImgData(testingImageFile)
 
