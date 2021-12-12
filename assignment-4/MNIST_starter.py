@@ -45,14 +45,22 @@ def getLabels(labelfile):
 # returns a list containing the pixels for each image, stored as a (784, 1) numpy array
 def getImgData(imagefile):
     # returns an array whose entries are each (28x28) pixel arrays with values from 0 to 255.0
+    
     images = idx2numpy.convert_from_file(imagefile)
+    print("Image data:", len(images), "entries")
 
-    # We want to flatten each image from a 28 x 28 to a 784 x 1 numpy array
-    # CODE GOES HERE
+    
     features = []
 
-    # convert to floats in [0,1] (only really necessary if you have other features, but we'll do it anyways)
-    # CODE GOES HERE
+    for image in images:
+        vec = np.array(image).flatten()
+        
+        # Normalize the pixel values to be between 0 and 1
+        vec = vec / 255.0
+        vec = cv(vec)
+        # vec = np.concatenate((vec), axis=0)
+
+        features.append(vec)
 
     return features
 
@@ -61,14 +69,18 @@ def getImgData(imagefile):
 # divides the data into training and testing sets, and encodes the training vectors in onehot form
 # returns a tuple (trainingData, testingData), each of which is a zipped array of features and labels
 def prepData():
-    ntrain, train_labels = getLabels(trainingLabelFile)
-    print("Training data:", ntrain, "entries")
-    print("Training labels:", len(train_labels), "entries")
+    m, training_labels = getLabels(trainingLabelFile)
+    n, testing_labels = getLabels(testingLabelFile)
+    print("Training data:", m, "entries")
+    print("Testing data:", n, "entries")
 
-    # CODE GOES HERE
-    trainingData = train_labels[:50000]
-    testingData = train_labels[50000:]
+    training_features = getImgData(trainingImageFile)
+    testing_features = getImgData(testingImageFile)
+    print("Training features:", len(training_features), "entries")
+    print("Testing features:", len(testing_features), "entries")
 
+    trainingData = zip(training_labels, training_features)
+    testingData = zip(testing_labels, testing_features)
     return (trainingData, testingData)
 
 
@@ -77,9 +89,6 @@ def prepData():
 
 trainingData, testingData = prepData()
 
-print("Training data:", len(trainingData))
-print("Testing data:", len(testingData))
 
-
-# net = network.Network([784, 30, 10])
-# net.SGD(trainingData, 10, 10, 1, test_data=testingData)
+net = network.Network([784, 30, 10])
+net.SGD(trainingData, 10, 10, 1, test_data=testingData)
