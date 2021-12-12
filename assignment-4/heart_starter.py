@@ -99,10 +99,8 @@ def readData(filename):
 # divides the data into training and testing sets, and encodes the training vectors in onehot form
 # returns a tuple (trainingData, testingData), each of which is a zipped array of features and labels
 def prepData():
-
     n, features, labels = readData('data/heart.csv')
     
-
     ntrain = int(n * 5/6)
     ntest = n - ntrain
 
