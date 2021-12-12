@@ -128,9 +128,4 @@ def prepData():
 trainingData, testingData = prepData()
 
 net = network.Network([9,10,2])
-net.SGD(trainingData, 10, 10, .1, test_data = testingData)
-
-
-# sample = ['138', 128, 0.5, 3.7, 12.81, "Present", 66, 21.25, 22.73, 28, 0]
-# features, label = getDataFromSample(sample)
-# print(features, label)
+net.SGD(trainingData, 100, 10, .1, test_data = testingData)
