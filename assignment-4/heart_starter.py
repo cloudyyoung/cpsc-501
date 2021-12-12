@@ -1,4 +1,5 @@
 import csv
+from random import sample
 import numpy as np
 import network
 
@@ -53,8 +54,8 @@ def getDataFromSample(sample):
     typea = cv([standardize(int(sample[6]), 53.1, 9.81)])
 
     # obesity
-    obesity = cv([standardize(float(sample[7]), 26.0, 4.21)]
-)
+    obesity = cv([standardize(float(sample[7]), 26.0, 4.21)])
+
     # alcohol
     alcohol = cv([standardize(float(sample[8]), 17.0, 24.5)])
 
@@ -130,4 +131,6 @@ net = network.Network([9,10,2])
 net.SGD(trainingData, 10, 10, .1, test_data = testingData)
 
 
-       
+# sample = ['138', 128, 0.5, 3.7, 12.81, "Present", 66, 21.25, 22.73, 28, 0]
+# features, label = getDataFromSample(sample)
+# print(features, label)
