@@ -59,7 +59,8 @@ def getDataFromSample(sample):
     alcohol = cv([standardize(float(sample[8]), 17.0, 24.5)])
 
     # age
-    age = cv([standardize(int(sample[9]), 42.8, 14.6)])
+    # age = cv([standardize(int(sample[9]), 42.8, 14.6)])
+    age = cv([int(sample[9]) * 1.0 / 64.0])
 
     features = np.concatenate((sbp, tobacco, ldl, adiposity, famhist, typea, obesity, alcohol, age), axis=0)
 
