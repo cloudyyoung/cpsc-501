@@ -126,4 +126,4 @@ def prepData():
 trainingData, testingData = prepData()
 
 net = network.Network([9,10,2])
-net.SGD(trainingData, 100, 10, .1, test_data = testingData)
+net.SGD(trainingData, 10, 10, .1, test_data = testingData)
