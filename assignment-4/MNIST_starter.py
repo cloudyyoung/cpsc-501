@@ -54,8 +54,6 @@ def getImgData(imagefile):
 
     for image in images:
         vec = np.array(image).flatten()
-        
-        # Normalize the pixel values to be between 0 and 1
         vec = vec / 255.0
         vec = cv(vec)
 
