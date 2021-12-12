@@ -68,11 +68,15 @@ def getImgData(imagefile):
 def prepData():
     _, training_labels = getLabels(trainingLabelFile)
     _, testing_labels = getLabels(testingLabelFile)
-
+    
+    training_labels_onehot = []
+    for training_label in training_labels:
+        training_labels_onehot.append(onehot(training_label, 10))
+        
     training_features = getImgData(trainingImageFile)
     testing_features = getImgData(testingImageFile)
 
-    trainingData = zip(training_features, training_labels)
+    trainingData = zip(training_features, training_labels_onehot)
     testingData = zip(testing_features, testing_labels)
     return (trainingData, testingData)
 
@@ -84,4 +88,4 @@ trainingData, testingData = prepData()
 
 
 net = network.Network([784, 30, 10])
-net.SGD(trainingData, 10, 10, 1, test_data=testingData)
+net.SGD(trainingData, 10, 10, .1, test_data=testingData)
