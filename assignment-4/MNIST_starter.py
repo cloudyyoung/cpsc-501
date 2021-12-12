@@ -58,7 +58,6 @@ def getImgData(imagefile):
         # Normalize the pixel values to be between 0 and 1
         vec = vec / 255.0
         vec = cv(vec)
-        # vec = np.concatenate((vec), axis=0)
 
         features.append(vec)
 
@@ -69,18 +68,14 @@ def getImgData(imagefile):
 # divides the data into training and testing sets, and encodes the training vectors in onehot form
 # returns a tuple (trainingData, testingData), each of which is a zipped array of features and labels
 def prepData():
-    m, training_labels = getLabels(trainingLabelFile)
-    n, testing_labels = getLabels(testingLabelFile)
-    print("Training data:", m, "entries")
-    print("Testing data:", n, "entries")
+    _, training_labels = getLabels(trainingLabelFile)
+    _, testing_labels = getLabels(testingLabelFile)
 
     training_features = getImgData(trainingImageFile)
     testing_features = getImgData(testingImageFile)
-    print("Training features:", len(training_features), "entries")
-    print("Testing features:", len(testing_features), "entries")
 
-    trainingData = zip(training_labels, training_features)
-    testingData = zip(testing_labels, testing_features)
+    trainingData = zip(training_features, training_labels)
+    testingData = zip(testing_features, testing_labels)
     return (trainingData, testingData)
 
 
