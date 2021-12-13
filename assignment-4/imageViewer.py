@@ -27,7 +27,8 @@ file.close()
 
 # index is the image you want to view
 try:
-    index = int(sys.argv[1])
+    # index = int(sys.argv[1])
+    index = 7637
 except:
     index = 0
 

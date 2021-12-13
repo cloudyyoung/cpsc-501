@@ -1,4 +1,4 @@
-88% baseline
+88% baseline, 145s
 
 Image data: 60000 entries
 Image data: 10000 entries
@@ -16,7 +16,7 @@ Epoch 7 : 8721 / 10000
 Epoch 8 : 8798 / 10000
 Epoch 9 : 8856 / 10000
 
-95% optimized
+95% optimized, 305s
 Image data: 60000 entries
 Image data: 10000 entries
 Length of training data: 60000

@@ -1,4 +1,4 @@
-70% baseline
+70% baseline, 2s
 Number of data points read: 462
 Number of training samples: 385
 Number of testing samples: 77
@@ -16,7 +16,7 @@ Epoch 7 : 54 / 77
 Epoch 8 : 54 / 77
 Epoch 9 : 54 / 77
 
-76% optimized
+76% optimized, 2s
 Number of data points read: 462
 Number of training samples: 385
 Number of testing samples: 77

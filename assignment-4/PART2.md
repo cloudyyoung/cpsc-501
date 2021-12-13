@@ -1,4 +1,4 @@
-89% baseline
+89% baseline, 72s
 
 Length of training data: 60000
 Length of test data: 10000
@@ -15,7 +15,7 @@ Epoch 8 : 8911 / 10000
 Epoch 9 : 8926 / 10000
 
 
-90% optimized
+90% optimized, 184s
 Length of training data: 60000
 Length of test data: 10000
 Initial performance : 707 / 10000
