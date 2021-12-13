@@ -88,4 +88,5 @@ trainingData, testingData = prepData()
 
 
 net = network.Network([784, 30, 10])
-net.SGD(trainingData, 10, 10, .1, test_data=testingData)
+net.SGD(trainingData, 20, 10, 5, test_data=testingData)
+network.saveToFile(net, "part1.pkl")
